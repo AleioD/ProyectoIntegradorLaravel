@@ -43,7 +43,7 @@ class CreateDb extends Migration
           $table->foreign('user_id')->references('id')->on('users');
           $table->unsignedBigInteger('question_id')->nullable();
           $table->foreign('question_id')->references('id')->on('questions');
-          $table->numeric('score');
+          $table->integer('score');
       });
 
     }
