@@ -18,3 +18,35 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/index', function () {
+    return view('index');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
+
+Route::get('/ranking', function () {
+    return view('ranking');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/category', function () {
+    return view('category');
+});
