@@ -1,7 +1,7 @@
 @extends('layouts.master')
- 
+ @section('pageTitle',"Inicio")
 @section('content')
- 
+
 <section class="container-section">
 
   <h1 class="h1-index"><strong>Sabiondos</strong></h1>
@@ -21,5 +21,5 @@
 </div>
 
 </section>
- 
+
 @endsection

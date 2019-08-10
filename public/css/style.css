@@ -207,7 +207,7 @@ header {
   color: white;
   font-weight: bold;
   font-size: 1.8em;
-  margin-top: 3%;
+  margin-top:10%;
   text-align: center;
 }
 
@@ -215,12 +215,13 @@ header {
   width: 100vw;
   height: 60vh;
   display: block;
+  margin-bottom: 25px;
 }
 
 .card-img-top{
-  width: 80%;
+  width:65%;
   margin:auto;
-  margin-top: 5%;
+  margin-top:5%;
 }
 
 .carrousel-tablet-desktop{
@@ -231,7 +232,7 @@ header {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  margin:0 5px;
+  margin:10px 5px 10px ;
 }
 
 /*FINAL about*/
@@ -256,12 +257,16 @@ footer{
 /*FINAL footer*/
 
 /* FAQ's */
+.container{
+  padding:0;
+}
 
 .containerPreguntas{
   background-color: #6A6FF7;
-  margin: 0 auto;
+  padding: 0;
   margin-top: 15%;
   margin-bottom: 5%;
+  width: 100vw;
 }
 
 .containerPreguntas h1{
@@ -286,6 +291,7 @@ footer{
   width: 68vw;
   margin:10px;
   margin-right: 0px;
+  font-size: 1em;
 }
 
 .buscadorEnviar{
@@ -333,12 +339,12 @@ footer{
 .containerLogin {
   width: 50vw;
   height: 85vh;
-  margin: 0 auto;
+  margin: 0 ;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-around;
-  margin-top: 50% 0;
+  justify-content: center;
+
 }
 
 .inputLogin{
@@ -560,7 +566,7 @@ h5.bootstrap {
 }
 
 /* Final questions admin*/
-
+}
 
 /* Inicio Ranking desktop*/
 @media (min-width:768px) {
@@ -709,12 +715,21 @@ h5.bootstrap {
     align-items: center;
   }
 
+  .h2-about{
+    margin-top:30px;
+
+  }
+
   /*FINAL about*/
 
   /* FAQ's*/
+  .container{
+    margin:0;
+  }
 
   .containerPreguntas{
     margin-top: 7%;
+    width: 100vw;
   }
 
   .buscador{
@@ -730,7 +745,7 @@ h5.bootstrap {
   /* Final FAQ's*/
 }
 
-@media (min-width:1025px) {
+@media (min-width:1024px) {
   .container-ppal {
     max-width: 1200px;
     margin:0 auto;
@@ -738,6 +753,7 @@ h5.bootstrap {
 
   .container-section{
     justify-content:center;
+    width: 100vw;
     height: 85vh;
   }
 
@@ -789,6 +805,4 @@ h5.bootstrap {
     margin-top: 5.75%;
   }
   /*FINAL FAQ's*/
-
-
 }

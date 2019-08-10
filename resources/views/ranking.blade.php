@@ -1,5 +1,5 @@
 @extends('layouts.master')
- 
+ @section('pageTitle',"Ranking")
 @section('content')
 
 <?php
@@ -125,7 +125,7 @@ $rankingList =
 // https://psicologiaymente.com/miscelanea/preguntas-cultura-general
 
 ?>
- 
+
         <div class="row justify-content-md-center">
           <section class="blank-wrapper col-xl-12 shadow-lg p-3 mb-5 bg-white">
             <h1 class="titulo-seccion">Ranking</h1>
@@ -154,5 +154,5 @@ $rankingList =
             </div>
           </section>
         </div>
- 
+
 @endsection

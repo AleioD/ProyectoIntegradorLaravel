@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('pageTitle',"Categorias")
 @section('content')
 
 <div class="container-ppal"> <!-- Contenedor ppal -->

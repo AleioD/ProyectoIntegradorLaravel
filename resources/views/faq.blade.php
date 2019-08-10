@@ -1,9 +1,10 @@
 @extends('layouts.master')
- 
+@section('pageTitle',"Preguntas Frecuentes")
+
 @section('content')
- 
+
     <div class="containerPreguntas">
-      <section class="p-5">
+      <section class="p-4">
         <div class="col-md-12 row justify-content-center search-row margenIzq">
           <form>
             <div class="card card-sm search row">
@@ -114,5 +115,5 @@
         </div>
           </div>
         <br>
- 
+
 @endsection

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('pageTitle',"Acerca del Juego")
 @section('content')
 
  <div class="container-ppal"> <!-- Contenedor ppal -->
@@ -147,11 +147,13 @@
         </div>
 
         <!--FIN-carrousel bootstrap-->
-      </span>
 
+
+      </span>
       <div class="button-play">
         <a href="#">Jugar</a>
       </div>
+
 
     </section>
   </div>
