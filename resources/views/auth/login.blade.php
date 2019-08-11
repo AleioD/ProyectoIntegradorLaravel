@@ -35,14 +35,14 @@
           </div>
           <br>
 
-<button type="submit" class="btn btn-success">{{ __('Login') }}</button>
+<button type="submit" class="btn btn-success">Iniciar Sesión</button>
 <br><br>
        @if (Route::has('password.request'))
 <a  href="{{ route('password.request') }}">
                                       ¿Olvidaste tu contraseña?
                                     </a>
                                 @endif
-                                • ¿Aún no tenés cuenta? <a href="register.php">Registrate</a>
+                                • ¿Aún no tenés cuenta? <a href="/register">Registrate</a>
           </div>
 
 

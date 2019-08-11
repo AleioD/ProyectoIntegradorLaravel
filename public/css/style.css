@@ -334,6 +334,7 @@ footer{
   border-radius: 0 20px 20px 0;
 }
 
+
 /*Login*/
 
 .containerLogin {
@@ -357,6 +358,13 @@ footer{
 
 .inputLogin:focus{
   background-color: #6A6FF7;
+}
+
+.centrar-reg{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
 }
 
 @media (min-width: 768px){
@@ -394,6 +402,10 @@ footer{
   margin: auto;
 }
 
+.br-movil{
+  display: flex;
+}
+
 .h1-register{
   text-align: center;
   font-family: sans-serif;
@@ -408,6 +420,9 @@ footer{
   text-align: right;
   font-family: sans-serif;
 }
+
+
+
 /*final Register*/
 
 /*principio perfil*/
@@ -743,7 +758,15 @@ h5.bootstrap {
     width: 16vw;
   }
   /* Final FAQ's*/
+
+/*REGISTER*/
+  .col-6{
+    max-width: 100%;
+  }
+/* Final REGISTER*/
+
 }
+
 
 @media (min-width:1024px) {
   .container-ppal {
@@ -805,4 +828,7 @@ h5.bootstrap {
     margin-top: 5.75%;
   }
   /*FINAL FAQ's*/
+  .br-movil{
+    display: none;
+  }
 }
