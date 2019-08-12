@@ -1,7 +1,7 @@
 @extends('layouts.master')
- 
+
 @section('content')
- 
+
  <div class="container mt-5 mb-5 pt-5">
     <div class="row">
       <form class="ingreso col-md-6 offset-md-3" action="" method="post" enctype="multipart/form-data">
@@ -15,15 +15,15 @@
           <div class="alert alert-danger">
           </div>
         <div class="form-group fontLatoLabel">
-          <label for="nombre">Nombre:</label>
-          <input class="form-control" id="nombre" type="text" name="nombre"
+          <label for="name">Nombre:</label>
+          <input class="form-control" id="name" type="text" name="name"
           placeholder="Nombre">
         </div>
           <div class="alert alert-danger">
           </div>
         <div class="form-group fontLatoLabel">
-          <label for="nombre">Apellido:</label>
-          <input class="form-control" id="apellido" type="text" name="apellido"
+          <label for="surname">Apellido:</label>
+          <input class="form-control" id="surname" type="text" name="surname"
           placeholder="Apellido">
         </div>
           <div class="alert alert-danger">
@@ -37,8 +37,8 @@
           <div class="alert alert-danger">
           </div>
         <div class="form-group fontLatoLabel">
-          <label for="pais">Pais:</label>
-          <select class=" form-control" name="pais">
+          <label for="country">Pais:</label>
+          <select class=" form-control" name="country">
             <option value="">Elegí un país</option>
               <option value="">Argentina</option>
             </select>
@@ -90,5 +90,5 @@
       </div>
 
     </div>
- 
+
 @endsection
