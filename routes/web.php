@@ -19,19 +19,13 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/faq', function () {
-    return view('faq');
-});
+Route::get('/faq',  'FaqController@directory')->name('faq');
 
 Route::get('/ranking', function () {
     return view('ranking');
