@@ -11,11 +11,12 @@
 
 </head>
 
-<body>
-
-  <div class="container">
-    @include('partials.navbar')
+<body class="game">
+@include('partials.dark-navbar')
+  <div class="container-fluid">
+    <i class="material-icons cerrar">close</i>
     @yield('content')
+
   </div>
   @include('partials.footer')
 </body>

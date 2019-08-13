@@ -35,6 +35,10 @@ Route::get('/ranking', function () {
     return view('ranking');
 });
 
+Route::get('/game', function () {
+    return view('gameplay');
+});
+
 Route::get('/about',  'AboutController@directory')->name('about');
 
 Route::get('/category', function () {
