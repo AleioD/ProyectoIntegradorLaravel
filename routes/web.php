@@ -12,15 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get("/register", function (){
-    return view("register");
-  });
-
-Route::post("/register", function (){
-  return view("registrado");
+    return view('index');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -37,6 +29,10 @@ Route::get('/ranking', function () {
 
 Route::get('/game', function () {
     return view('gameplay');
+});
+
+Route::get('/questionAdminForm', function () {
+    return view('questionAdminForm');
 });
 
 Route::get('/about',  'AboutController@directory')->name('about');
