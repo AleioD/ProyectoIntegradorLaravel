@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'userName', 'name', 'surname', 'email', 'password',
+        'userName', 'name', 'surname', 'email', 'password','country','state', 'avatar', 'score','isAdmin','isActive'
     ];
 
     /**
@@ -37,7 +37,16 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getFullName(){
+    return $this->name . " " . $this->surname;
+      }
+
     public function isAdmin() {
       return $this->isAdmin;
+    }
+
+    public function questions()
+    {
+      return $this->belongsToMany(Question::class);
     }
 }

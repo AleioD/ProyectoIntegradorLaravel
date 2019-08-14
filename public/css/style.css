@@ -301,9 +301,20 @@ footer{
 /*final FAQ's*/
 
 /*INICIO Perfil*/
+.sectionPerfil{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .foto-perfil img{
   width:150px;
 }
+
 
 /*FINAL Perfil*/
 

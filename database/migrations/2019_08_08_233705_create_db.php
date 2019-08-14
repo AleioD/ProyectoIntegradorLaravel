@@ -36,7 +36,7 @@ class CreateDb extends Migration
           $table->boolean('isCorrect');
       });
 
-      Schema::create('rounds', function (Blueprint $table) {
+      Schema::create('user_question', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->timestamps();
           $table->unsignedBigInteger('user_id')->nullable();
@@ -58,6 +58,6 @@ class CreateDb extends Migration
         Schema::dropIfExists('categories');
         Schema::dropIfExists('questions');
         Schema::dropIfExists('answers');
-        Schema::dropIfExists('rounds');
+        Schema::dropIfExists('user_question');
     }
 }

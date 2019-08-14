@@ -46,7 +46,7 @@ $navLog=[
           <div class="dropdown-menu dropdown-menu-left">
             <button class="dropdown-item" type="button">
 
-<li><a style="color:#FFFFFF; font-size:1.2em ;" href="profile">
+<li><a style="color:#FFFFFF; font-size:1.2em ;" href="profile/ {{ Auth::user()->id }}">
 Perfil</a></li>
               <li>  @foreach ($navAdmin as $linkAdmin => $linkUrl)
                 @if (Auth::user()->isAdmin() == 1 && $linkAdmin == "Preguntas")
