@@ -31,9 +31,13 @@ Route::get('/game', function () {
     return view('gameplay');
 });
 
-Route::get('/questionAdminForm', function () {
-    return view('questionAdminForm');
-});
+// Route::get('/questionAdminForm', function () {
+//     return view('questionAdminForm');
+// });
+
+Route::get('/questionAdminForm', 'QuestionsController@add');
+
+Route::post('/questionAdminForm', 'QuestionsController@store');
 
 Route::get('/about',  'AboutController@directory')->name('about');
 
