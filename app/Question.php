@@ -27,6 +27,10 @@ class Question extends Model
   		return $this->belongsToMany(User::class);
   	}
 
+    public function getId() {
+      return $this->id;
+    }
+
 
 
 
