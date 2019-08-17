@@ -17,7 +17,7 @@
  </div>
 
 <div class="button-play">
-  <a href="#">Jugar</a>
+  <a href="/category">Jugar</a>
 </div>
 
 </section>
