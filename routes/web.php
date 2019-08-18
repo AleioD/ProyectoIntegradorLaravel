@@ -41,7 +41,7 @@ Route::get('/category', function () {
     return view('category');
 });
 
-Route::get('/profile/{id}', 'ProfileController@show')->name('show');
+//Route::get('/profile/{id}', 'ProfileController@show')->name('show');
 
 
 Auth::routes();
