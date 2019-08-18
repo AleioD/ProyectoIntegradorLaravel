@@ -82,25 +82,48 @@ $navLog=[
         <button id="themeFire" class="btn btn-danger btn-sm"> <a onclick="setActiveStyleSheet('onFire'); return false;" style="background:#dc3545;">ON FIRE</a></button>
         <button id="themePeace" class="btn btn-light btn-sm"> <a onclick="setActiveStyleSheet('peace'); return false;"style="background:#F8F9Fa;">PEACE</a></button>
         <button id="themePpal" class="btn btn-primary btn-sm"> <a onclick="setActiveStyleSheet('ppal'); return false;"style="background:#007bff;">ORIGINAL</a></button>
-      </div>
+<br>
+
+
+</div>
+
     </nav>
 
     <!-- Page Content  -->
 
-      <div id="content">
-        <!-- este boton es para q abra el sidebar  -->
+    <div id="content">
+      <!-- este boton es para q abra el sidebar  -->
 
-        <div class="nav-profile-ico">
-          <div class="btn-group">
-            <button id="sidebarCollapse" type="button" class="btn btn-link"  >
-              <i class="material-icons">account_circle</i>
-            </button>
-          </div>
+      <div class="nav-profile-ico">
+        <div class="btn-group">
+          <button id="sidebarCollapse" type="button" class="btn btn-link"  >
+            <i class="material-icons">account_circle</i>
+          </button>
         </div>
 
-        <div class="overlay"></div>
+      <div class="audio">
+        <br>
 
-      </div>
+        <button class="button-volume" id="buttonS" style="display:none;"> <i id="activeS"   class = "material-icons">
+          volume_up
+        </i></button>
+        <button class="button-volume" id="buttonB"> <i id="activeB"  class = "material-icons">
+          volume_off
+        </i></button>
+        <audio id="audio" autoplay loop>
+          <source src="/audio/audioSabiondos.ogg"  type="audio/ogg"  >
+            <source src="/audio/audioSabiondos.mp3"  type="audio/mp3"  >
+              <source src="/audio/audioSabiondos.wav"  type="audio/wav"  >
+                <object data="mediaplayer.swf?audio=/audio/audioSabiondos.mp3">
+                  <param name="movie" value="mediaplayer.swf?audio=/audio/audioSabiondos.mp3">
+                </object>
+
+              </audio>
+            </div>
+              </div>
+      <div class="overlay"></div>
+
+    </div>
 
     <div class="toggle-nav">
       <div class="btn-group">
