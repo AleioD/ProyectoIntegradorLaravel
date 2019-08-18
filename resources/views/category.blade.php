@@ -15,7 +15,7 @@
 						<li data-target="#carouselExampleControls" data-slide-to="4"></li>
 						<li data-target="#carouselExampleControls" data-slide-to="5"></li>
 					</ol>
-					<div class="carousel-inner text-center">
+					<div class="carousel-inner text-center" id="categoriesList">
 						<div class="carousel-item active">
 							<div class="card category-card" style="margin: 0 auto; width: 25%;">
 								<img class="mx-auto" src="/img/categorias/categoria_arte.png" alt="Arte">
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 
-			<div class="button-play empezar">
+			<div class="button-play empezar" id="startGame">
 				<a href="/game">Empezar</a>
 			</div>
 		</section>

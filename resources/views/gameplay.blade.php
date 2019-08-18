@@ -1,5 +1,5 @@
 @extends('layouts.game')
-@section('pageTitle',"Categorias")
+@section('pageTitle',"Juego")
 @section('content')
 
 <!-- {{$question}};
