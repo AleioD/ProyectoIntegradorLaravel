@@ -5,10 +5,23 @@ var downloadTimer;
 Agregamos funcionalidad a los botones salir del juego y guardar.
 Mas adelante guardar debe hacer un update de la base de datos.
 */
-
+if (document.title == 'Categorias') {
 var startGame = document.querySelector('#startGame').addEventListener("click", selectCategory);
 var quitGame = document.querySelector('#quitGame').addEventListener("click", doQuitGame);
 var saveGame = document.querySelector('#saveGame').addEventListener("click", doSaveGame);
+}
+
+if (document.title == 'Juego') {
+  var quitGame = document.querySelector('#quitGame').addEventListener("click", doQuitGame);
+  var saveGame = document.querySelector('#saveGame').addEventListener("click", doSaveGame);
+  /*
+  Recuperamos el puntaje guardado y arrancamos el contador.
+  */
+  showTime();
+  recoverScore();
+  startCounting();
+}
+
 
 function doQuitGame() {
   sessionStorage.removeItem("score")
@@ -29,13 +42,6 @@ function checkCategory(item, index) {
     alert(item.childNodes[1].innerText);
   }
 }
-
-/*
-Recuperamos el puntaje guardado y arrancamos el contador.
-*/
-showTime();
-recoverScore();
-startCounting();
 
 /*
 Capturamos en un array los botones de respuesta para agregarles funcionalidad de juego.

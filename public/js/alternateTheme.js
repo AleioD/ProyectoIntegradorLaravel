@@ -64,22 +64,23 @@ var title = cookie ? cookie : getPreferredStyleSheet();
 setActiveStyleSheet(title);
 
 
-
-
-
 var audio= document.getElementById("audio");
 
 
 var volumeS=document.getElementById("buttonS");
-volumeS.addEventListener("click", function() {
-  volumeB.style.display="flex";
-  volumeS.style.display="none";
-  audio.play();
-});
-var volumeB=document.getElementById("buttonB");
-volumeB.addEventListener("click", function() {
+if (volumeS != null) {
+  volumeS.addEventListener("click", function() {
+    volumeB.style.display="flex";
+    volumeS.style.display="none";
+    audio.play();
+  });
+}
 
-  volumeS.style.display="flex";
-  volumeB.style.display="none";
-  audio.pause();
-});
+var volumeB=document.getElementById("buttonB");
+if (volumeB != null) {
+  volumeB.addEventListener("click", function() {
+    volumeS.style.display="flex";
+    volumeB.style.display="none";
+    audio.pause();
+  });
+}
