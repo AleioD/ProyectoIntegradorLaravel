@@ -18,6 +18,18 @@ body {
   background-image: url(../img/fondo-mobile2.png);
   background-repeat: repeat;
 }
+.audio{
+  margin: 5px 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-volume{
+  background: rgba(0, 0, 0, 0);
+  border:0;
+  font-size: 0.8em;
+}
+
 
 .fontLatoLabel {
   font-family: 'Lato', sans-serif !important;

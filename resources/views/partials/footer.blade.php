@@ -12,15 +12,13 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-<!--script para sidebar-->
-<!-- jQuery CDN - Slim version (=without AJAX) -->
 
+<!--script para sidebar-->
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" ></script>
 <!-- jQuery Custom Scroller CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<!-- <script type="text/javascript" src="/js/sidebar.js"></script>
-<script type="text/javascript" src="/js/alternateTheme.js"></script> -->
-
-<script src="/js/game.js"></script>
+<script type="text/javascript" src="/js/sidebar.js"></script>
+<script type="text/javascript" src="/js/alternateTheme.js"></script>
+<script type="text/javascript" src="/js/game.js"></script>
