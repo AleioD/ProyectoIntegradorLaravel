@@ -27,7 +27,7 @@
                 <div class="card" style="width: 75%; margin: auto;">
     <img src="img/user_1.png" class="rounded-circle card-img-top" alt="...">
     <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">Sabiondos es un juego de preguntas y respuestas. El objetivo es contestar preguntas para sumar puntos. </p>
     </div>
   </div>
 
@@ -36,7 +36,7 @@
                 <div class="card" style="width: 75%; margin: auto;">
   <img src="img/user_2.png" class="rounded-circle card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Cada pregunta correcta suma 10 puntos. Se considera una partida completa al contestar 10 preguntas.</p>
   </div>
 </div>
 
@@ -45,7 +45,7 @@
                 <div class="card" style="width: 75%; margin: auto;">
   <img src="img/user_8.png" class="rounded-circle card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Una vez alcanzados los primeros 200 puntos podes competir contra otros usuarios apostando puntaje.</p>
   </div>
 </div>
 
@@ -54,7 +54,7 @@
                 <div class="card" style="width: 75%; margin: auto;">
   <img src="img/user_4.png" class="rounded-circle card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Suma puntos y gana estrellitas! Cada vez que ganes una estrellita tendrás un premio sorpresa!!</p>
   </div>
 </div>
 
@@ -63,7 +63,7 @@
                 <div class="card" style="width: 75%; margin: auto;">
   <img src="img/user_12.png" class="rounded-circle card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text"><a href="/register">Registrate</a> y empeza a disfrutar de Sabiondos, el juego que pone a prueba tus conocimientos!!</p>
   </div>
 </div>
 
@@ -95,7 +95,7 @@
                 <div class="card" style="width: 75%; margin: auto; flex-direction: row; ">
     <img src="img/user_1.png" class="rounded-circle card-img-top" style="margin: 10px; "alt="...">
     <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">Sabiondos es un juego de preguntas y respuestas. El objetivo es contestar preguntas para sumar puntos.</p>
     </div>
   </div>
 
@@ -104,7 +104,7 @@
                 <div class="card" style="width: 75%; margin: auto; flex-direction: row; ">
     <img src="img/user_8.png" class="rounded-circle card-img-top" style="margin: 10px; "alt="...">
     <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">Cada pregunta correcta suma 10 puntos. Se considera una partida completa al contestar 10 preguntas.</p>
     </div>
   </div>
 
@@ -113,7 +113,7 @@
                 <div class="card" style="width: 75%; margin: auto; flex-direction: row; ">
     <img src="img/user_3.png" class="rounded-circle card-img-top" style="margin: 10px; "alt="...">
     <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">Una vez alcanzados los primeros 200 puntos podes competir contra otros usuarios apostando puntaje.</p>
     </div>
   </div>
 
@@ -122,7 +122,7 @@
               <div class="card" style="width: 75%; margin: auto; flex-direction: row; ">
   <img src="img/user_4.png" class="rounded-circle card-img-top" style="margin: 10px; "alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Suma puntos y gana estrellitas! Cada vez que ganes una estrellita tendrás un premio sorpresa!!</p>
   </div>
 </div>
 
@@ -131,7 +131,7 @@
               <div class="card" style="width: 75%; margin: auto; flex-direction: row; ">
   <img src="img/user_12.png" class="rounded-circle card-img-top" style="margin: 10px; "alt="...">
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text"><a href="/register">Registrate</a> y empeza a disfrutar de Sabiondos, el juego que pone a prueba tus conocimientos!!</p>
   </div>
   </div>
 
