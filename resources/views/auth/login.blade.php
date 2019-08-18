@@ -38,11 +38,11 @@
       <button type="submit" class="btn btn-success">Iniciar Sesión</button>
       <br><br>
       @if (Route::has('password.request'))
-        <a  href="{{ route('password.request') }}">
+        <a class="link" href="{{ route('password.request') }}">
           ¿Olvidaste tu contraseña?
         </a>
       @endif
-      • ¿Aún no tenés cuenta? <a href="/register">Registrate</a>
+      • ¿Aún no tenés cuenta? <a  class="link" href="/register">Registrate</a>
     </div>
 
 

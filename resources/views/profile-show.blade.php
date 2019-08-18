@@ -1,6 +1,6 @@
-@extends('layouts.master')
- @section('pageTitle',"Perfil")
-@section('content')
+@extends('layout.master')
+@section('pageTitle',"Perfil")
+@section('contentProfile')
 
 
 

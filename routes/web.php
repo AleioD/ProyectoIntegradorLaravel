@@ -43,7 +43,7 @@ Route::get('/about',  'AboutController@directory')->name('about');
 
 Route::get('/category', 'GameController@showCategory');
 
-Route::get('/profile/{id}', 'ProfileController@show')->name('show');
+//Route::get('/profile/{id}', 'ProfileController@show')->name('show');
 
 
 Auth::routes();

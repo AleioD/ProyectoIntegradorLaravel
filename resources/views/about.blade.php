@@ -2,7 +2,9 @@
 @section('pageTitle',"Acerca del Juego")
 @section('content')
 
- <div class="container-ppal"> <!-- Contenedor ppal -->
+
+
+<div class="">
 
 
     <section class="container-section">
@@ -145,9 +147,7 @@
             </a>
           </div>
         </div>
-
         <!--FIN-carrousel bootstrap-->
-
 
       </span>
       <div class="button-play">
@@ -156,6 +156,6 @@
 
 
     </section>
-  </div>
+</div>
 
 @endsection

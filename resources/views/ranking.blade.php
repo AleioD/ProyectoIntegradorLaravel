@@ -3,7 +3,6 @@
 @section('content')
 
 <?php
-
 $rankingList =
 [
   [
@@ -118,12 +117,9 @@ $rankingList =
     'imagen' => '/img/user_14.png',
     'rating' => 1,
   ],
-
 ];
-
 //var_dump($questionArrayList);
 // https://psicologiaymente.com/miscelanea/preguntas-cultura-general
-
 ?>
 
         <div class="row justify-content-md-center">
