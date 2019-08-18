@@ -4,16 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Answer extends Model
+class Category extends Model
 {
+  public $table = "categories";
+  
   protected $guarded=['id'];
-
-
-  public function questions()
-  {
-    return $this->hasMany(Question::class);
-  }
-
 
 
 }

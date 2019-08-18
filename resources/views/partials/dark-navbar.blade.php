@@ -14,7 +14,7 @@
     </div>
 
     <div class="game-navbar-div">
-      <span class="game-text-title">1000 ptos</span>
+      <span class="game-text-title" id="score">0</span>
       <div class="rating-game">
         <i class="material-icons estrellita active">star</i>
         <i class="material-icons estrellita active">star</i>

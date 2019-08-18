@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
+    public $table = "questions";
+
     protected $guarded=['id'];
 
 
@@ -24,6 +26,10 @@ class Question extends Model
   	{
   		return $this->belongsToMany(User::class);
   	}
+
+    public function getId() {
+      return $this->id;
+    }
 
 
 

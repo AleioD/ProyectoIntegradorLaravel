@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('pageTitle',"Preguntas")
+@section('pageTitle',"Agregar Preguntas")
 @section('content')
   <div class="mt-5 mb-5 pt-5">
     <div class=" justify-content-center p-1">
 
-      <form class="fontLatoLabel offset-md-3" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+      <form class="fontLatoLabel offset-md-3" method="POST" action="questionAdminForm">
         @csrf
 
         <div class="row justify-content-center ">
@@ -13,7 +13,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="question">Ingresar pregunta</label>
-              <input id="question" type="text" class="form-control @error('question') is-invalid @enderror" question="question" value="{{ old('question') }}" required autocomplete="question" autofocus>
+              <input id="question" type="text" class="form-control @error('question') is-invalid @enderror" name="question" value="{{ old('question') }}" required autocomplete="question" autofocus>
                 @error('question')
                   <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
@@ -60,13 +60,12 @@
                     </div>
                       <div class="col-md-12 ">
                     <div class="form-group">
-                      <label for="exampleFormControlSelect1">Seleccione una categoría</label>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Arte</option>
-                        <option>Literatura</option>
-                        <option>Cultura General</option>
-                        <option>Ciencia</option>
-                        <option>Deportes</option>
+                      <label for="">Seleccione una categoría</label>
+                      <select class="form-control" name="category_id">
+                        <option value="">Elegí una categoria</option>
+                        @foreach ($categories as $category)
+                          <option value="{{ $category->id }}"> {{ $category->name }}</option>
+                        @endforeach
                       </select>
                     </div>
                   </div>

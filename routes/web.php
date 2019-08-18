@@ -27,19 +27,21 @@ Route::get('/ranking', function () {
     return view('ranking');
 });
 
-Route::get('/game', function () {
-    return view('gameplay');
-});
+Route::get('/game', 'GameController@startGame');
 
-Route::get('/questionAdminForm', function () {
-    return view('questionAdminForm');
-});
+Route::post('/game', 'GameController@saveScore');
+
+// Route::get('/questionAdminForm', function () {
+//     return view('questionAdminForm');
+// });
+
+Route::get('/questionAdminForm', 'QuestionsController@add');
+
+Route::post('/questionAdminForm', 'QuestionsController@store');
 
 Route::get('/about',  'AboutController@directory')->name('about');
 
-Route::get('/category', function () {
-    return view('category');
-});
+Route::get('/category', 'GameController@showCategory');
 
 //Route::get('/profile/{id}', 'ProfileController@show')->name('show');
 
