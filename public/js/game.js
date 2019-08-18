@@ -1,10 +1,11 @@
 console.log('game is running');
 
 var score = 0;
-if (parseInt(sessionStorage.getItem('score'))>0) {
-  score = parseInt(sessionStorage.getItem('score'));
+if (parseInt(sessionStorage.getItem('score'))) {
+  puntos = parseInt(sessionStorage.getItem('score'));
+  score = score + puntos;
+  document.querySelector('#score').innerText = score;
 }
-document.querySelector('#score').innerText = score;
 
 /*
 Agregamos funcionalidad a los botones salir del juego y guardar.
