@@ -39,7 +39,7 @@ function selectCategory() {
 
 function checkCategory(item, index) {
   if (item.classList.contains('active')) {
-    alert(item.childNodes[1].innerText);
+    document.querySelector('#selectedCategory').value = item.childNodes[1].innerText;
   }
 }
 

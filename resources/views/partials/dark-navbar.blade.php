@@ -5,7 +5,7 @@
       <img class="img rounded-circle img-navbar" src="/img/user_1.png" alt="">
         <div class="game-navbar-div">
         <span class="game-text-title">Modo Anónimo</span>
-        <span class="game-text-subtitle">Sin categoría</span>
+        <span class="game-text-subtitle">@yield('category')</span>
       </div>
     </div>
 

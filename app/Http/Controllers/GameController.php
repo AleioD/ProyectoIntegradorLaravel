@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Category;
 use App\Question;
 use App\Answer;
 
@@ -25,12 +26,15 @@ class GameController extends Controller
       return view('gameplay', compact('question', 'id', 'answers', 'puntos'));
     }
 
-    public function saveScore(Request $form) {
-      //dd($form);
-      $pp = $form['score'];
+    public function select(Request $form) {
       $puntos = $this->score;
-      $this->score = $puntos + $pp;
-      return redirect('game');
+      $categoryName = $form['selectedCategory'];
+      $category = Category::where('name', $categoryName)->first();
+      $idCat = $category->getId();
+      $question = Question::where('category_id', $idCat)->inRandomOrder()->first();
+      $id = $question->getId();
+      $answers = Answer::inRandomOrder()->where('question_id', $id)->get();
+      return view('gameplay', compact('question', 'id', 'answers', 'puntos', 'categoryName'));
     }
 
 

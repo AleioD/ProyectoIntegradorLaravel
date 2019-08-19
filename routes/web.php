@@ -29,7 +29,7 @@ Route::get('/ranking', function () {
 
 Route::get('/game', 'GameController@startGame');
 
-Route::post('/game', 'GameController@saveScore');
+Route::post('/game', 'GameController@select');
 
 // Route::get('/questionAdminForm', function () {
 //     return view('questionAdminForm');
