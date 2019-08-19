@@ -14,6 +14,7 @@
 				<li data-target="#carouselExampleControls" data-slide-to="3"></li>
 				<li data-target="#carouselExampleControls" data-slide-to="4"></li>
 				<li data-target="#carouselExampleControls" data-slide-to="5"></li>
+				<li data-target="#carouselExampleControls" data-slide-to="6"></li>
 			</ol>
 			<div class="carousel-inner text-center" id="categoriesList">
 				<div class="carousel-item active">
@@ -46,6 +47,12 @@
 						<p class="category-text">Deportes</p>
 					</div>
 				</div>
+				<div class="carousel-item">
+					<div class="card category-card">
+						<img class="mx-auto" src="/img/categorias/categoria_unselect.png" alt="Sin Categoria">
+						<p class="category-text">Sin Categoria</p>
+					</div>
+				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -61,8 +68,7 @@
 			{{ csrf_field() }}
 			<input type="hidden" name="selectedCategory" id="selectedCategory">
 			<div class="form-group d-flex justify-content-center">
-				<button style="border:none;" class="text-white text-decoration-none p-2 w-auto button-play empezar" id="startGame" type="submit" name="button" value="press">Elegir</button>
-				<a style="" class="text-white text-decoration-none p-2 w-auto button-play empezar" href="/game">Jugar sin categoria</a>
+				<button style="border:none;" class="text-white text-decoration-none p-2 w-auto button-play empezar" id="startGame" type="submit" name="button" value="press">Jugar</button>
 			</div>
 		</form>
 
