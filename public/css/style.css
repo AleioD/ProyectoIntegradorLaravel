@@ -148,16 +148,11 @@ display: none;
 
 /*sidebar*/
 
-#content {
-  width: 100%;
-  min-height: 100vh;
-  transition: all 0.3s;
+.overlay.active {
   position: absolute;
   top: 0;
-  right: 0;
-}
-
-.overlay.active {
+  left: o;
+  z-index: 993;
   display: block;
   opacity: 1;
 }
@@ -172,7 +167,7 @@ display: none;
   background: #7386D5;
   color: #fff;
   transition: all 0.3s;
-  overflow-y: scroll;
+/*  overflow-y: scroll;*/
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   padding: 30px 20px;
 }
@@ -946,6 +941,9 @@ i.estrellita.active {
     text-decoration: none;
   }
 
+  #sidebar {
+    padding: 15px 10 0 15px;
+  }
 
 
   /* INICIO perfil*/

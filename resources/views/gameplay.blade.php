@@ -41,5 +41,5 @@
 <button type="submit" name="button">siguiente</button>
 </form> -->
 
-
+<br><br>
 @endsection

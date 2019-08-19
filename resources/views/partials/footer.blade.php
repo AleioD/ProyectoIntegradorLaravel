@@ -1,4 +1,4 @@
-<br><br>
+
 <footer>
     <h4 class="h4-footer">Copyright 2019</h4>
 </footer>
@@ -14,11 +14,9 @@
 
 
 <!--script para sidebar-->
-<!-- Bootstrap JS -->
-<?php // TODO: Fer fijate que ya esta llamado arriba el cdn de bootstrap ?>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" ></script>
 
-<!-- <script type="text/javascript" src="/js/sidebar.js"></script>
-<script type="text/javascript" src="/js/alternateTheme.js"></script> -->
+
+<script type="text/javascript" src="/js/sidebar.js"></script>
+<!--<script type="text/javascript" src="/js/alternateTheme.js"></script>-->
 
 <script src="/js/game.js"></script>

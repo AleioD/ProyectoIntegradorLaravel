@@ -153,8 +153,6 @@
       <div class="button-play">
         <a href="/category">Jugar</a>
       </div>
-
-
     </section>
 </div>
 
