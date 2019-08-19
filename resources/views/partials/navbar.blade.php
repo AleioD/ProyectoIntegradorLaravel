@@ -64,12 +64,13 @@ $navLog=[
               @csrf
             </form>
           </ul>
-          <!--      <br>
+              <br>
           <h5>Cambiar Tema:</h5>
-          <button id="themeFire" class="btn btn-danger btn-sm"> <a onclick="setActiveStyleSheet('onFire'); return false;" style="background:#dc3545;">ON FIRE</a></button>
-          <button id="themePeace" class="btn btn-light btn-sm"> <a onclick="setActiveStyleSheet('peace'); return false;"style="background:#F8F9Fa;">PEACE</a></button>
-          <button id="themePpal" class="btn btn-primary btn-sm"> <a onclick="setActiveStyleSheet('ppal'); return false;"style="background:#007bff;">ORIGINAL</a></button>
-          <br>-->
+          <button id="stylesheet1" class="btn btn-primary btn-sm"> <a style="background:#007bff;">ORIGINAL</a></button>
+          <button id="stylesheet2" class="btn btn-danger btn-sm"> <a  style="background:#dc3545;">ON FIRE</a></button>
+          <button id="stylesheet3" class="btn btn-light btn-sm"> <a style="background:#F8F9Fa;">PEACE</a></button>
+
+          <br>
         </div>
       </nav>
 

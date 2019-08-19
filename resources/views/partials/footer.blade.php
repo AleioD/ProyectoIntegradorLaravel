@@ -17,6 +17,6 @@
 
 
 <script type="text/javascript" src="/js/sidebar.js"></script>
-<!--<script type="text/javascript" src="/js/alternateTheme.js"></script>-->
+<script type="text/javascript" src="/js/alternateTheme.js"></script>
 
 <script src="/js/game.js"></script>

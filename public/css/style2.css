@@ -154,16 +154,12 @@ i.estrellita.active {
 }
 /*sidebar*/
 
-#content {
-  width: 100%;
-  min-height: 100vh;
-  transition: all 0.3s;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 .overlay.active {
+  position: absolute;
+  top: 0;
+  left: o;
+  z-index: 993;
   display: block;
   opacity: 1;
 }
@@ -178,7 +174,7 @@ i.estrellita.active {
   background: rgb(210, 0, 0);
   color: #fff;
   transition: all 0.3s;
-  overflow-y: scroll;
+/*  overflow-y: scroll;*/
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   padding: 30px 20px;
 }
@@ -228,7 +224,7 @@ i.estrellita.active {
   transition: all 0.5s ease-in-out;
 }
 
-#themeFire{
+#stylesheet2{
 display: none;
 }
 
@@ -958,6 +954,9 @@ i.estrellita.active {
     text-decoration: none;
   }
 
+  #sidebar {
+    padding: 15px 10 0 15px;
+  }
 
 
   /* INICIO perfil*/
