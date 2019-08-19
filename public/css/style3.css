@@ -240,7 +240,7 @@ display: none;
   justify-content:flex-start;
   align-items: center;
   width: 100%;
-  height: 88vh;
+  height: 85vh;
 }
 
 .h1-index{
@@ -260,10 +260,11 @@ display: none;
 }
 
 .sub-ppal{
-  color: white;
-  font-size: 1.5em;
+  color: rgb(3, 71, 4);
+  font-size: 1.2em;
   text-align: center;
   margin-bottom: 10%;
+
 }
 
 .sub-ppal a{
@@ -370,7 +371,7 @@ footer{
 
 .h4-footer{
   font-size: 1em;
-  color: white;
+  color: rgb(3, 71, 4);
 }
 
 /*FINAL footer*/
