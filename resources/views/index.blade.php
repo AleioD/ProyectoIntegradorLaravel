@@ -17,7 +17,7 @@
  </div>
 
 <div class="button-play">
-  <a href="/category">Jugar</a>
+  <a id="buttonP" href="/category">Jugar</a>
 </div>
 
 </section>

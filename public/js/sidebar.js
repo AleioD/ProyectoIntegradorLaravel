@@ -1,17 +1,21 @@
 $(document).ready(function () {
-    $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-    });
+$('#sidebar').on('click', function () {
+  $('.collapse.in').toggleClass('in');
+  $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+});
 
-    $('#dismiss, .overlay').on('click', function () {
-        $('#sidebar').removeClass('active');
-        $('.overlay').removeClass('active');
-    });
+$('#sidebarCollapse').on('click', function () {
+  $('#sidebar').toggleClass('active');
+  $('.overlay').toggleClass('active');
+});
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').addClass('active');
-        $('.overlay').addClass('active');
-        $('.collapse.in').toggleClass('in');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-    });
+$('#dismiss').on('click', function(){
+  $('#sidebar').removeClass('active');
+  $('.overlay').removeClass('active');
+});
+
+$('.overlay').on('click', function(){
+$('#sidebar').toggleClass('active');
+$('.overlay').toggleClass('active');
+});
 });
