@@ -286,12 +286,13 @@ display: none;
   color: white;
   vertical-align: middle;
   padding-bottom: 5px;
+  text-decoration: none;
 }
 
 .button-play:hover{
-  color: white;
+  color: rgb(67, 115, 44);
   vertical-align: middle;
-  padding-bottom: 5px;
+
   background-color: rgb(67, 115, 44);
 }
 
