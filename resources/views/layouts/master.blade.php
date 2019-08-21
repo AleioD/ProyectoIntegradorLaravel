@@ -13,7 +13,7 @@
 
 <body>
 
-  <div class="container">
+  <div class="container-fluid">
     @include('partials.navbar')
     @yield('content')
   </div>
