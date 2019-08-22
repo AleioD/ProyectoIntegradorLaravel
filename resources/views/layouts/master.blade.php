@@ -7,7 +7,7 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/app.css">
-  <link id="pagestyle" rel="stylesheet" href="/css/style.css" title="ppal" id="style1">
+  <link id="pagestyle" rel="stylesheet" href="/css/style.css">
 
 </head>
 

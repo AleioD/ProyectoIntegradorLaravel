@@ -66,9 +66,12 @@ $navLog=[
           </ul>
               <br>
           <h5>Cambiar Tema:</h5>
-          <button id="stylesheet1" class="btn btn-primary btn-sm"> <a style="background:#007bff;">ORIGINAL</a></button>
-          <button id="stylesheet2" class="btn btn-danger btn-sm"> <a  style="background:#dc3545;">ON FIRE</a></button>
-          <button id="stylesheet3" class="btn btn-light btn-sm"> <a style="background:#F8F9Fa;">PEACE</a></button>
+
+
+
+          <button data-theme="/css/style.css"  id="stylesheet1" class="btn btn-primary btn-theme btn-sm"> <a style="background:#007bff;">ORIGINAL</a></button>
+          <button data-theme="/css/style2.css" id="stylesheet2" class="btn btn-danger btn-theme btn-sm"> <a  style="background:#dc3545;">ON FIRE</a></button>
+          <button data-theme="/css/style3.css" id="stylesheet3" class="btn btn-light btn-theme btn-sm"> <a style="background:#F8F9Fa;">PEACE</a></button>
 
           <br>
         </div>
