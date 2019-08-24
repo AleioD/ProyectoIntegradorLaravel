@@ -6,7 +6,7 @@
 
 
 
-      <form class="fontLatoLabel offset-md-3" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+      <form id="formulario" class="fontLatoLabel offset-md-3" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <div class="row justify-content-center ">
@@ -15,10 +15,12 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="name">Nombre de Usuario:</label>
-              <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                @error('name')
+              <input id="userName" type="text" class="form-control @error('userName') is-invalid @enderror"name="userNname" value="{{ old('userName') }}" required autocomplete="userName" autofocus>
+                @error('userName')
                   <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
+                <div class="invalid">
+  							</div>
               </div>
             </div>
             <!--FIN DE AGREGADO-->
@@ -30,6 +32,8 @@
                   @error('email')
                     <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                   @enderror
+                  <div class="invalid">
+    							</div>
                 </div>
               </div>
 
@@ -41,6 +45,8 @@
                     @error('name')
                       <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                     @enderror
+                    <div class="invalid">
+      							</div>
                   </div>
                 </div>
 
@@ -48,11 +54,13 @@
 
                 <div class="col-md-6 ">
                   <div class="form-group">
-                    <label for="name">Apellido:</label>
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                      @error('name')
+                    <label for="surname">Apellido:</label>
+                    <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror"name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
+                      @error('surname')
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                       @enderror
+                      <div class="invalid">
+        							</div>
                     </div>
                   </div>
 
@@ -60,31 +68,27 @@
                   <div class="form-group">
                     <label for="country">Elegí un país:</label>
                     <select id="country" name="country" class="form-control @error('country') is-invalid @enderror" value="{{ old('country') }}" required autocomplete="country" autofocus>
-                      <option>Arte</option>
-                      <option>Literatura</option>
-                      <option>Cultura General</option>
-                      <option>Ciencia</option>
-                      <option>Deportes</option>
+                      <option value"">Elige un pais</option>
                     </select>
                     @error('country')
                       <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                     @enderror
+                    <div class="invalid">
+      							</div>
                   </div>
                 </div>
 
-                <div class="col-md-6" style="display:none">
+                <div id="provincias" class="col-md-6" style="display:none">
                 <div class="form-group">
                 <label for="state">Elegí una provincia:</label>
                 <select id="state" name="state" class="form-control @error('state') is-invalid @enderror" value="{{ old('state') }}" required autocomplete="state" autofocus>
-                  <option>Arte</option>
-                  <option>Literatura</option>
-                  <option>Cultura General</option>
-                  <option>Ciencia</option>
-                  <option>Deportes</option>
+                  <option value"">Elige una provincia</option>
                 </select>
                 @error('state')
                   <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
+                <div class="invalid">
+  							</div>
                 </div>
                 </div>
 
@@ -104,6 +108,8 @@
                           @error('avatar')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                           @enderror
+                          <div class="invalid">
+            							</div>
                         </div>
 
                       <div class="col-md-6">
