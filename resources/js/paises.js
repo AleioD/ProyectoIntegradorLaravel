@@ -4,8 +4,8 @@ var campoSurname = document.querySelector("[name=surname]");
 var campoEmail = document.querySelector("[name=email]");
 var campoPaises = document.querySelector("[name=country]");
 var campoProvincias = document.querySelector("[name=state]");
-var divProvincias = document.querySelector("#provincias");
 var elFormulario = document.querySelector("[#formulario]");
+var divProvincias = document.querySelector("#provincias");
 
 fetch("https://restcountries.eu/rest/v2/all")
   .then(function(response){
@@ -87,6 +87,29 @@ if (paisElegido === "Argentina"){
 
   			delete errores[this.name];
 
+        if (this.name === "password") {
+          if (valorDelCampo.length <= 5) {
+            this.classList.add("is-invalid");
+            divError.style.display = "block";
+            divError.innerText = "La contraseña debe tener al menos 5 caracteres"
+            errores[this.name] = true;
+
+          } else if (valorDelCampo.indexOf("DH") < 0) {
+          this.classList.add("is-invalid");
+          divError.style.display = "block";
+          divError.innerText = "La contraseña debe incluir las letras 'DH'";
+          errores[this.name] = true;
+          } else if (valorDelCampo.indexOf(" ") > 0){
+          this.classList.add("is-invalid");
+          divError.style.display = "block";
+          divError.innerText = "La contraseña no puede tener espacios en blanco";
+          errores[this.name] = true;
+          } else {
+            this.classList.remove("is-invalid");
+            divError.style.display = "none";
+            divError.innerText = "";
+          }
+        }
 
 
   			if (this.name === "email") {
