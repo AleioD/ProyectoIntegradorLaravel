@@ -20,3 +20,5 @@
 <script type="text/javascript" src="/js/alternateThemeStorage.js"></script>
 
 <script src="/js/game.js"></script>
+
+<script src="/js/paises.js"></script>
