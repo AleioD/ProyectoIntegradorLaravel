@@ -1,12 +1,17 @@
+// Traemos todos los campos del formulario
 var campoUser = document.querySelector("[name=userName]");
 var campoName = document.querySelector("[name=name]");
 var campoSurname = document.querySelector("[name=surname]");
 var campoEmail = document.querySelector("[name=email]");
 var campoPaises = document.querySelector("[name=country]");
 var campoProvincias = document.querySelector("[name=state]");
+
+//Traemos el formulario
 var elFormulario = document.querySelector("[#formulario]");
+//El div de las Provincias, que aparece oculto
 var divProvincias = document.querySelector("#provincias");
 
+//Api de los paises
 fetch("https://restcountries.eu/rest/v2/all")
   .then(function(response){
     return response.json();
@@ -23,16 +28,16 @@ fetch("https://restcountries.eu/rest/v2/all")
     console.log(error);
   });
 
+//Si es elegido "Argentina", hago visible el div de las provincias
 var paisElegido = campoPaises.onchange = function(){
   return this.optionText[this.selectedIndex].value;
 }
-
 
 if (paisElegido === "Argentina"){
     divProvincias.style.display = "block";
 }
 
-
+//Api de las provincias
   fetch("https://dev.digitalhouse.com/api/getProvincias")
     .then(function (response){
       return response.json();
@@ -54,13 +59,14 @@ if (paisElegido === "Argentina"){
 
 
 
-
+  // Agarramos el formulario y eliminamos el boton de enviar
   var losCampos = Array.from(elFormulario.elements);
   losCampos.pop();
   var regexEmail = /\S+@\S+\.\S+/;
 
   var errores = {};
 
+  //Aclaramos cual es el Div del error en cada caso
   losCampos.forEach(function (unCampo) {
   	var divError = null;
     if (unCampo.type !== "file") {
@@ -69,10 +75,11 @@ if (paisElegido === "Argentina"){
   		divError = unCampo.parentElement.nextElementSibling;
   	}
 
-  	unCampo.addEventListener("blur", function () {
+    //Validamos cuando el usuario sale del input
+    unCampo.addEventListener("blur", function () {
   		var valorDelCampo = unCampo.value.trim();
 
-
+      // si el campo está vacío
   		if (valorDelCampo === "") {
   			this.classList.add("is-invalid");
   			divError.style.display = "block";
@@ -87,8 +94,12 @@ if (paisElegido === "Argentina"){
 
   			delete errores[this.name];
 
+          // ver que el user sea único
+
+
+        // si el password tiene menos de 5 caracteres o si le faltan las letras "DH"
         if (this.name === "password") {
-          if (valorDelCampo.length <= 5) {
+          if (valorDelCampo.length < 5) {
             this.classList.add("is-invalid");
             divError.style.display = "block";
             divError.innerText = "La contraseña debe tener al menos 5 caracteres"
@@ -104,14 +115,20 @@ if (paisElegido === "Argentina"){
           divError.style.display = "block";
           divError.innerText = "La contraseña no puede tener espacios en blanco";
           errores[this.name] = true;
-          } else {
+          }
+
+            // ver que el email sea unico
+
+
+
+          else {
             this.classList.remove("is-invalid");
             divError.style.display = "none";
             divError.innerText = "";
           }
         }
 
-
+        // Nos aseguramos de que tenga un formato de email válido
   			if (this.name === "email") {
   				if (!regexEmail.test(valorDelCampo)) {
   					this.classList.add("is-invalid");
@@ -131,7 +148,7 @@ if (paisElegido === "Argentina"){
   		console.log(errores);
   	});
 
-
+    //Validamos la extension de la foto
   	if (unCampo.name === "avatar") {
   		unCampo.addEventListener("change", function () {
   			var nombreArchivo = this.value.split("\\").pop();
@@ -174,6 +191,7 @@ if (paisElegido === "Argentina"){
   		}
   	});
 
+      // Evitamos que se envíe el formulario si contiene errores
   	if (Object.keys(errores).length > 0) {
   		alert("Campos vacíos");
   		console.log(errores);
