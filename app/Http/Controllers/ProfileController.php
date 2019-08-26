@@ -13,10 +13,14 @@ class ProfileController extends Controller
     }
 
     public function show ($id)
-    	{
-    		$user = User::find($id);
-    		return view('profile-show', compact('user'));
-    	}
+  	{
+  		$user = User::find($id);
+  		return view('profile-show', compact('user'));
+  	}
+
+    public function showRanking(){
+      return view('ranking');
+    }
 
 
 

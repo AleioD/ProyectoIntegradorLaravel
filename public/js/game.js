@@ -29,7 +29,9 @@ function doQuitGame() {
 }
 
 function doSaveGame() {
-  window.location.pathname = '/ranking';
+  window.location.pathname = '/saveGame';
+  sessionStorage.removeItem("score")
+  // window.location.pathname = '/ranking';
 }
 
 function selectCategory() {

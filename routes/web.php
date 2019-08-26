@@ -23,13 +23,13 @@ Route::get('/index', function () {
 
 Route::get('/faq',  'FaqController@directory')->name('faq');
 
-Route::get('/ranking', function () {
-    return view('ranking');
-});
+Route::get('/ranking', 'ProfileController@showRanking');
 
 Route::get('/game', 'GameController@startGame');
 
 Route::post('/game', 'GameController@select');
+
+Route::get('/saveGame', 'GameController@saveGame');
 
 // Route::get('/questionAdminForm', function () {
 //     return view('questionAdminForm');
