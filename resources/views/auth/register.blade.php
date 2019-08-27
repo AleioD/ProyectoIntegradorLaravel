@@ -12,7 +12,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="name">Nombre de Usuario:</label>
-              <input id="userName" type="text" class="form-control @error("userName") is-invalid @enderror"name="userNname" value="{{ old('userName') }}" required autocomplete="userName" autofocus>
+              <input id="userName" type="text" class="form-control @error("userName") is-invalid @enderror"name="userName" value="{{ old('userName') }}" required autocomplete="userName" autofocus>
                 @error("userName")
                   <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                 @enderror
@@ -65,7 +65,7 @@
                     <div class="form-group">
                       <label for="country">Elegí un país:</label>
                       <select id="country" name="country" class="form-control @error("country") is-invalid @enderror" value="{{ old('country') }}" required autocomplete="country" autofocus>
-                        <option value"">Elige un pais</option>
+                        <option value="">Elige un pais</option>
                       </select>
                       @error("country")
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
@@ -79,7 +79,7 @@
                     <div class="form-group">
                       <label for="state">Elegí una provincia:</label>
                       <select id="state" name="state" class="form-control @error("state") is-invalid @enderror" value="{{ old('state') }}" required autocomplete="state" autofocus>
-                        <option value"">Elige una provincia</option>
+    <option value="">Elige una provincia</option>
                       </select>
                       @error("state")
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
@@ -116,6 +116,7 @@
                           @error("password")
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                           @enderror
+                          <div class="invalid"></div>
                         </div>
                       </div>
 
@@ -123,6 +124,10 @@
                         <div class="form-group">
                           <label for="password-confirm" class="col-form-label ">Repetir Contraseña:</label>
                           <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                          @error("password")
+                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                          @enderror
+                          <div class="invalid"></div>
                         </div>
                       </div>
 
