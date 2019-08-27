@@ -54,12 +54,12 @@ $navAdmin = [
               @csrf
             </form>
           </ul>
-          <!--      <br>
+            <br>
           <h5>Cambiar Tema:</h5>
-          <button id="themeFire" class="btn btn-danger btn-sm"> <a onclick="setActiveStyleSheet('onFire'); return false;" style="background:#dc3545;">ON FIRE</a></button>
-          <button id="themePeace" class="btn btn-light btn-sm"> <a onclick="setActiveStyleSheet('peace'); return false;"style="background:#F8F9Fa;">PEACE</a></button>
-          <button id="themePpal" class="btn btn-primary btn-sm"> <a onclick="setActiveStyleSheet('ppal'); return false;"style="background:#007bff;">ORIGINAL</a></button>
-          <br>-->
+          <button data-theme="/css/style.css"  id="stylesheet1" class="btn btn-primary btn-theme btn-sm"> <a style="background:#007bff;">ORIGINAL</a></button>
+          <button data-theme="/css/style2.css" id="stylesheet2" class="btn btn-danger btn-theme btn-sm"> <a  style="background:#dc3545;">ON FIRE</a></button>
+          <button data-theme="/css/style3.css" id="stylesheet3" class="btn btn-light btn-theme btn-sm"> <a style="background:#F8F9Fa;">PEACE</a></button>
+         <br>
         </div>
       </nav>
       @endauth
@@ -86,6 +86,26 @@ $navAdmin = [
             @endguest
             <span class="game-text-subtitle">@yield('category')</span>
           </div>
+<!--  AUDIO  -->
+          <div class="audio">
+            <br>
+
+            <button class="button-volume material-icons" id="buttonS" style="display:none; color:white;"> <i id="activeS">
+              volume_up
+            </i></button>
+            <button class="button-volume material-icons" id="buttonB"  style="color:white;"> <i id="activeB">
+              volume_off
+            </i></button>
+            <audio id="audio" autoplay loop>
+              <source src="/audio/audioSabiondos.ogg"  type="audio/ogg"  >
+                <source src="/audio/audioSabiondos.mp3"  type="audio/mp3"  >
+                  <source src="/audio/audioSabiondos.wav"  type="audio/wav"  >
+                    <object data="mediaplayer.swf?audio=/audio/audioSabiondos.mp3">
+                      <param name="movie" value="mediaplayer.swf?audio=/audio/audioSabiondos.mp3">
+                    </object>
+                  </audio>
+                </div>
+<!--  FIN AUDIO  -->
         </div>
 
         <div class="game-navbar-div">

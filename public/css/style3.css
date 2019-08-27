@@ -27,7 +27,9 @@ body {
 .button-volume{
   background: rgba(0, 0, 0, 0);
   border:0;
-  font-size: 0.8em;
+  font-size: 0.6em;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .fontLatoLabel {
@@ -1022,7 +1024,7 @@ i.estrellita.active {
 body.game {
   margin: 0;
   background-image: none;
-  background-color: #6A6FF7;
+  background-color:rgb(110, 186, 74) ;
   width: 100%;
   width: 100%;
   min-width: 440px;

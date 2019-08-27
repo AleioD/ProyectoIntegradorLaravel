@@ -29,8 +29,11 @@ body {
 .button-volume{
   background: rgba(0, 0, 0, 0);
   border:0;
-  font-size: 0.8em;
+  font-size: 0.6em;
+  font-style: normal;
+  font-weight: normal;
 }
+
 
 .fontLatoLabel {
   font-family: 'Lato', sans-serif !important;
@@ -282,7 +285,7 @@ display: none;
   vertical-align: middle;
   padding-bottom: 5px;
   text-decoration: none;
-  
+
 }
 
 .image-mobile{

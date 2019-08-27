@@ -18,7 +18,7 @@
 			</ol>
 			<div class="carousel-inner text-center" id="categoriesList">
 				<div class="carousel-item active">
-					<div class="card category-card" style="margin: 0 auto; width: 25%;">
+					<div class="card category-card" >
 						<img class="mx-auto" src="/img/categorias/categoria_arte.png" alt="Arte">
 						<p class="category-text">Arte</p>
 					</div>

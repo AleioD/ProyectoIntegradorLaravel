@@ -18,6 +18,8 @@
   // https://psicologiaymente.com/miscelanea/preguntas-cultura-general
   ?>
 
+
+
   <div class="container mx-auto mt-5">
     <div class="row d-flex flex-row justify-content-around">
       <section class="blank-wrapper col-xl-12 shadow-lg p-3 mb-5 bg-white">

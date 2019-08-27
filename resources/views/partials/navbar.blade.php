@@ -66,13 +66,9 @@ $navLog=[
           </ul>
               <br>
           <h5>Cambiar Tema:</h5>
-
-
-
           <button data-theme="/css/style.css"  id="stylesheet1" class="btn btn-primary btn-theme btn-sm"> <a style="background:#007bff;">ORIGINAL</a></button>
           <button data-theme="/css/style2.css" id="stylesheet2" class="btn btn-danger btn-theme btn-sm"> <a  style="background:#dc3545;">ON FIRE</a></button>
           <button data-theme="/css/style3.css" id="stylesheet3" class="btn btn-light btn-theme btn-sm"> <a style="background:#F8F9Fa;">PEACE</a></button>
-
           <br>
         </div>
       </nav>
@@ -89,25 +85,7 @@ $navLog=[
             </button>
           </div>
 
-          <div class="audio">
-            <br>
 
-            <button class="button-volume" id="buttonS" style="display:none;"> <i id="activeS"   class = "material-icons">
-              volume_up
-            </i></button>
-            <button class="button-volume" id="buttonB"> <i id="activeB"  class = "material-icons">
-              volume_off
-            </i></button>
-            <audio id="audio" autoplay loop>
-              <source src="/audio/audioSabiondos.ogg"  type="audio/ogg"  >
-                <source src="/audio/audioSabiondos.mp3"  type="audio/mp3"  >
-                  <source src="/audio/audioSabiondos.wav"  type="audio/wav"  >
-                    <object data="mediaplayer.swf?audio=/audio/audioSabiondos.mp3">
-                      <param name="movie" value="mediaplayer.swf?audio=/audio/audioSabiondos.mp3">
-                    </object>
-
-                  </audio>
-                </div>
               </div>
               <div class="overlay"></div>
 
