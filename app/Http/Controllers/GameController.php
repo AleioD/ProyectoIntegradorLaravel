@@ -55,7 +55,7 @@ class GameController extends Controller
 
       $puntosFinal = Auth::user()->score + 10;
 
-      DB::table('user_question')->insert([
+      DB::table('rounds')->insert([
         'user_id' => Auth::user()->id,
         'score' => 10,
       ]);

@@ -36,13 +36,11 @@ class CreateDb extends Migration
           $table->boolean('isCorrect');
       });
 
-      Schema::create('user_question', function (Blueprint $table) {
+      Schema::create('rounds', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->timestamps();
           $table->unsignedBigInteger('user_id')->nullable();
           $table->foreign('user_id')->references('id')->on('users');
-          $table->unsignedBigInteger('question_id')->nullable();
-          $table->foreign('question_id')->references('id')->on('questions');
           $table->integer('score');
       });
 
