@@ -41,9 +41,10 @@ $navLog=[
             <div class="puntaje-perfil ">
               {{Auth::user()->score}}
             </div>
-            <div class="estrellas-perfil">
+            <br>
+            {{-- <div class="estrellas-perfil">
               <i class="material-icons estrellita active" >star</i>
-            </div>
+            </div> --}}
           </div>
           <div class="menu-perfil">
             <ul>
@@ -53,6 +54,9 @@ $navLog=[
                   </a></li>
                 @endif
               @endforeach
+              <li style="display:block; background:rgba(0,0,0,0.2);padding: 5px;border-radius: 5px; margin: 0 0 10px 0;">
+                <a style=" background:rgba(0,0,0,0);" href="{{ route('rounds') }}">Partidas
+                  </a></li>
               <li style="display:block; background:rgba(0,0,0,0.2);padding: 5px;border-radius: 5px;  margin:0 0 10px 0;">
                 <a style=" background:rgba(0,0,0,0);"href="{{ route('logout') }}"
                 onclick="event.preventDefault();
@@ -83,7 +87,14 @@ $navLog=[
             <button id="sidebarCollapse" type="button" class="btn btn-link"  >
               <i class="material-icons">account_circle</i>
             </button>
+            @if (Request::url() != Request::is('index'))
+                    <div>
+                      <img src="/img/logoSabiondos.png" style="width:50%;" alt="Logo Sabiondos">
+                    </div>
+              @endif
           </div>
+
+
 
 
               </div>
@@ -137,6 +148,13 @@ $navLog=[
 
             @endauth
             @guest
+
+              @if (Request::url() != Request::is('index'))
+                      <div>
+                        <img src="/img/logoSabiondos.png" style="width:50%; margin:20px;" alt="Logo Sabiondos">
+                      </div>
+                @endif
+
 
               <ul class="nav-access">
                 @foreach ($navAccess as $linkAcc => $links)

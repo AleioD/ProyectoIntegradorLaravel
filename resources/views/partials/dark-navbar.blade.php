@@ -108,9 +108,7 @@ $navAdmin = [
 <!--  FIN AUDIO  -->
         </div>
 
-        <div class="game-navbar-div">
-          <span class="time" id="timer" style="display:none;">Tiempo: 25s</span>
-        </div>
+      
 
         <div class="game-navbar-div">
           <span class="game-text-title" id="score">0</span>

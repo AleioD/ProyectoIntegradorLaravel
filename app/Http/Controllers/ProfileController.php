@@ -40,9 +40,7 @@ class ProfileController extends Controller
                     ->orderBy('created_at', 'desc')
                     ->get();
       return view('rounds-show', compact('roundsByUser'));
-    }
 
-
-
+  }
 
 }

@@ -314,6 +314,43 @@ display: none;
 
 /*FINAL index*/
 
+/* INICIO rounds*/
+.topRounds{
+  background-color: rgb(150, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  margin-top:10%;
+  color:  #707070;
+  font-size: 1em;
+  padding-top: 10px;
+}
+
+.h2-rounds{
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.h3-rounds{
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.containerRounds{
+  border-radius:20px;
+  width:100vw;
+}
+
+/*FINAL rounds*/
 /*INICIO about*/
 
 .container-about {
@@ -507,6 +544,15 @@ footer{
   }
   /*final Login*/
 
+  /*INICIO rounds*/
+  .containerRounds{
+    border-radius:20px;
+    width:70vw;
+  }
+  .topRounds{
+    margin-top:30%;
+    }
+  /*FINAL rounds*/
 
   /*INICIO navbar*/
   .navLink a {
@@ -993,6 +1039,16 @@ i.estrellita.active {
   }
 
   /*FINAL Perfil*/
+
+  /*INICIO rounds*/
+  .containerRounds{
+    border-radius:20px;
+    width:50vw;
+  }
+  .topRounds{
+    margin-top:10%;
+    }
+  /*FINAL rounds*/
 
   /* FAQ's*/
 

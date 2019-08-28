@@ -6,10 +6,16 @@
 <!-- {{$question}};
 {{$answers}}; -->
 
+
 <form action="/guardarScore" method="post" id="formScore">
 	@csrf
 	<input type="text" name="columnaAguardar" id="scoreInput">
 </form>
+
+<div style="display:flex; justify-content: center; align-items: center; width: 500px; ">
+	<img src="/img/logoSabiondos.png" style="width:50%;" alt="Logo Sabiondos">
+</div>
+
 
 <button type="button" id="saveScore">Guardar Partida</button>
 
