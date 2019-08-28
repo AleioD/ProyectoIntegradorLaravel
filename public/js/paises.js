@@ -89,7 +89,7 @@ losCampos.forEach(function (unCampo) {
     if (valorDelCampo === "") {
       this.classList.add("is-invalid");
       divError.style.display = "block";
-      divError.innerText = `El campo ${this.name} es obligatorio`;
+      divError.innerText = `Este campo es obligatorio`;
       errores[this.name] = true;
     } else {
       this.classList.remove("is-invalid");
