@@ -97,7 +97,7 @@ losCampos.forEach(function (unCampo) {
       divError.innerText = "";
       delete errores[this.name];
 
-      // ver que el user sea único
+
 
 
       // si el password tiene menos de 5 caracteres o si le faltan las letras "DH"
@@ -120,8 +120,7 @@ losCampos.forEach(function (unCampo) {
           errores[this.name] = true;
         }
 
-        // ver que el email sea unico
-
+        
 
 
         else {
