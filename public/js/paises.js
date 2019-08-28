@@ -92,7 +92,7 @@ losCampos.forEach(function (unCampo) {
     if (valorDelCampo === "") {
       this.classList.add("is-invalid");
       divError.style.display = "block";
-      divError.innerText = `El campo ${this.name} es obligatorio`;
+      divError.innerText = `Este campo es obligatorio`;
       errores[this.name] = true;
     } else {
       this.classList.remove("is-invalid");
@@ -188,7 +188,7 @@ losCampos.forEach(function (unCampo) {
 
 
 // Valido cuando se envíe el formulario //
-elFormu.addEventListener("submit", function (event) {
+formulario.addEventListener("submit", function (event) {
   losCampos.forEach(function (unCampo) {
     var valorFinalDelCampo = unCampo.value.trim();
 
