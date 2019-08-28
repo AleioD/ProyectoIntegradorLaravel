@@ -25,6 +25,8 @@ Route::get('/faq',  'FaqController@directory')->name('faq');
 
 Route::get('/ranking', 'ProfileController@showRanking');
 
+Route::get('/rounds', 'ProfileController@showRounds');
+
 Route::get('/game', 'GameController@startGame');
 
 Route::post('/game', 'GameController@select');

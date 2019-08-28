@@ -1,13 +1,21 @@
-@extends('layout.master')
+@extends('layouts.master')
 @section('pageTitle',"Perfil")
-@section('contentProfile')
+@section('content')
 
 
 
 
         <section class="sectionPerfil p-5">
 
-  <h1 class="h1-index"><strong>{{$user->getFullName()}}</strong></h1>
+          @foreach ($roundsByUser as $unaRonda)
+    				<li>
+    					<b>ID Usuario: </b> {{ $unaRonda->user_id }} <br>
+    					<b>SCORE RONDA: </b> {{ $unaRonda->score }} <br>
+    					<b>FECHA: </b> {{ $unaRonda->created_at }} <br>
+    				</li>
+    			@endforeach
+
+  {{-- <h1 class="h1-index"><strong>{{$user->getFullName()}}</strong></h1>
 
           <div class="foto-perfil">
             <img src="{{$user->avatar}}"  alt="Foto del usuario">
@@ -27,7 +35,7 @@
 
             <div class="estrellas-perfil">
             <i class="material-icons estrellita active" >star</i>
-            </div>
+            </div> --}}
 
       </section>
 

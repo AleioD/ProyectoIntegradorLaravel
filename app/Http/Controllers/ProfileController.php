@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -19,7 +21,25 @@ class ProfileController extends Controller
   	}
 
     public function showRanking(){
-      return view('ranking');
+      $topScorers = DB::table('users')
+                    ->select('username', 'name', 'surname', 'score')
+                    ->orderBy('score', 'desc')
+                    ->get();
+      return view('ranking', compact('topScorers'));
+    }
+
+    public function showRounds(){
+
+      if (Auth::user() == null) {
+        return redirect('register');
+      }
+
+      $roundsByUser = DB::table('rounds')
+                    ->select('user_id', 'score', 'created_at')
+                    ->where('user_id', Auth::user()->id)
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+      return view('rounds-show', compact('roundsByUser'));
     }
 
 

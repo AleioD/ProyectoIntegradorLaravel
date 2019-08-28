@@ -23,6 +23,16 @@
   <div class="container mx-auto mt-5">
     <div class="row d-flex flex-row justify-content-around">
       <section class="blank-wrapper col-xl-12 shadow-lg p-3 mb-5 bg-white">
+        <ul>
+    			@foreach ($topScorers as $unUsuario)
+    				<li>
+    					<b>Usuario: </b> {{ $unUsuario->username }} <br>
+    					<b>Nombre: </b> {{ $unUsuario->name }} <br>
+    					<b>Apellido: </b> {{ $unUsuario->surname }} <br>
+    					<b>Puntaje: </b> {{ $unUsuario->score }} <br>
+    				</li>
+    			@endforeach
+    		</ul>
         <h1 class="titulo-seccion">Ranking</h1>
         <div class="ranking-wrap row">
           <?php foreach ($rankingList as $oneUser) : ?>
