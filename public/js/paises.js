@@ -47,17 +47,14 @@ fetch("https://dev.digitalhouse.com/api/getProvincias")
   return response.json();
 })
 .then(function (provincias){
-  for (var provincia in provincias) {
-    provincias = provincias.data;
-    for (provincia of provincias){
-      var option = document.createElement("option");
-      option.value = provincia.state;
-      var optionText = document.createTextNode(provincia.state);
-      option.append(optionText);
-      campoProvincias.append(option);
-
-    }
-  }
+  provincias = provincias.data;
+     for (var provincia of provincias){
+       var option = document.createElement("option");
+       option.value = provincia.state;
+       var optionText = document.createTextNode(provincia.state);
+       option.append(optionText);
+       campoProvincias.append(option);
+}
 })
 .catch(function (error){
   console.log(error);
@@ -188,7 +185,7 @@ losCampos.forEach(function (unCampo) {
 
 
 // Valido cuando se envíe el formulario //
-elFormu.addEventListener("submit", function (event) {
+elFormulario.addEventListener("submit", function (event) {
   losCampos.forEach(function (unCampo) {
     var valorFinalDelCampo = unCampo.value.trim();
 
