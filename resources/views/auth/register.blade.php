@@ -78,7 +78,7 @@
                   <div id="provincias" class="col-md-6" style="display:none">
                     <div class="form-group">
                       <label for="state">Elegí una provincia:</label>
-                      <select id="state" name="state" class="form-control @error("state") is-invalid @enderror" value="{{ old('state') }}" required autocomplete="state" autofocus>
+                      <select id="state" name="state" class="form-control @error("state") is-invalid @enderror" value="{{ old('state') }}" autocomplete="state" autofocus>
                       <option value="">Elige una provincia</option>
                       </select>
                       @error("state")

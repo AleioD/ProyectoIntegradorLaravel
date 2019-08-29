@@ -35,11 +35,13 @@ if (campoPaises != null) {
     if(campoPaises.value == "AR")
     {
       divProvincias.style.display = "block";
+      campoProvincias.setAttribute("required", "");
     }
     else
     {
       divProvincias.style.display = "none";
       campoProvincias.value = "";
+      campoProvincias.removeAttribute("required");
     }
   });
 }
