@@ -1,6 +1,6 @@
 @extends('layouts.game')
 @section('pageTitle',"Juego")
-@section('category',$categoryName ?? 'Sin categoría')
+@section('category',$categoryName ?? 'Categoria al Azar')
 @section('content')
 
 {{-- <!-- {{$question}};

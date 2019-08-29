@@ -33,7 +33,7 @@ class GameController extends Controller
     public function select(Request $form) {
       $puntos = $this->score;
       $categoryName = $form['selectedCategory'];
-      if ($categoryName == 'Sin Categoria') {
+      if ($categoryName == 'Categoria al Azar') {
         $puntos = $this->score;
         $question = Question::inRandomOrder()->first();
         $id = $question->getId();

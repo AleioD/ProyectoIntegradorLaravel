@@ -14,8 +14,7 @@
 				<li data-target="#carouselExampleControls" data-slide-to="3"></li>
 				<li data-target="#carouselExampleControls" data-slide-to="4"></li>
 				<li data-target="#carouselExampleControls" data-slide-to="5"></li>
-
-			</ol>
+      	</ol>
 			<div class="carousel-inner text-center" id="categoriesList">
 				<div class="carousel-item active">
 					<div class="card" style="width: 250px; margin: auto;">
@@ -49,8 +48,8 @@
 				</div>
 				<div class="carousel-item">
 					<div class="card" style="width:250px; margin: auto;">
-						<img class="mx-auto" src="/img/categorias/categoria_unselect.png" alt="Sin Categoria">
-						<p class="category-text">Categoría al azar</p>
+						<img class="mx-auto" src="/img/categorias/categoria_unselect.png" alt="Categoria al Azar">
+						<p class="category-text">Categoria al Azar</p>
 					</div>
 				</div>
 			</div>

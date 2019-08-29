@@ -78,7 +78,7 @@ $navAdmin = [
       <!-- probando el menu desplegable de bootstrap-->
       <div class="game-navbar-div-user">
         @auth
-        <img id="sidebarCollapse" class="rounded-circle " style="width:60px; margin-right: 5px;" src="storage/avatars/{{Auth::user()->avatar}}"  alt="Foto del usuario" >
+        <img id="sidebarCollapse" class="rounded-circle " style="width:60px; height:60px; margin-right: 5px;" src="storage/avatars/{{Auth::user()->avatar}}"  alt="Foto del usuario" >
           @endauth
           @guest
           <img class="img rounded-circle img-navbar" src="./img/user_8.png" alt="">
