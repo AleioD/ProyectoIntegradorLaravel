@@ -55,7 +55,7 @@ class RegisterController extends Controller
             "userName" => ['required', 'string', 'max:255'],
             "surname" => ['required', 'string', 'max:255'],
             "country" => ['required'],
-            "avatar" => ['required', 'image'],
+            "avatar" => ['required'],
 
         ]);
     }
