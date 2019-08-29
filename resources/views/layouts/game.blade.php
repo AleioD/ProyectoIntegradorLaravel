@@ -52,7 +52,7 @@
         </div>
         <div class="modal-footer">
           <button id="saveGame2" type="button" class="btn btn-primary">Guardar</button>
-          <button id="continueGame" type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+          <button id="continueGame" type="button" class="btn btn-secondary" data-dismiss="modal">Seguir jugando</button>
         </div>
       </div>
     </div>

@@ -189,7 +189,7 @@ function recoverScore() {
 function answersCounter() {
   if (parseInt(sessionStorage.getItem("counter"))) {
     var count = parseInt(sessionStorage.getItem("counter"));
-    if (count == 3) {
+    if (count == 10) {
       $("#guardarElJuego").modal('show');
     }
   } else {
