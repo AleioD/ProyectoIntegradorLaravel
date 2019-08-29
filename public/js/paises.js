@@ -30,18 +30,19 @@ fetch("https://restcountries.eu/rest/v2/all")
   console.log(error);
 });
 
-campoPaises.addEventListener("change", function() {
-  if(campoPaises.value == "AR")
-  {
-    divProvincias.style.display = "block";
-  }
-  else
-  {
-    divProvincias.style.display = "none";
-    campoProvincias.value = "";
-  }
-});
-
+if (campoPaises != null) {
+  campoPaises.addEventListener("change", function() {
+    if(campoPaises.value == "AR")
+    {
+      divProvincias.style.display = "block";
+    }
+    else
+    {
+      divProvincias.style.display = "none";
+      campoProvincias.value = "";
+    }
+  });
+}
 
 fetch("https://dev.digitalhouse.com/api/getProvincias")
 .then(function (response){
@@ -49,150 +50,139 @@ fetch("https://dev.digitalhouse.com/api/getProvincias")
 })
 .then(function (provincias){
   provincias = provincias.data;
-     for (var provincia of provincias){
-       var option = document.createElement("option");
-       option.value = provincia.state;
-       var optionText = document.createTextNode(provincia.state);
-       option.append(optionText);
-       campoProvincias.append(option);
-}
+  for (var provincia of provincias){
+    var option = document.createElement("option");
+    option.value = provincia.state;
+    var optionText = document.createTextNode(provincia.state);
+    option.append(optionText);
+    campoProvincias.append(option);
+  }
 })
 .catch(function (error){
   console.log(error);
 })
 
 
-
+if (elFormulario != null) {
+  var losCampos = Array.from(elFormulario.elements);
+}
 // Agarramos el formulario y eliminamos el boton de enviar
-var losCampos = Array.from(elFormulario.elements);
 
-losCampos.pop();
-var regexEmail = /\S+@\S+\.\S+/;
+if (losCampos != null) {
+  losCampos.pop();
 
-var errores = {};
+  var regexEmail = /\S+@\S+\.\S+/;
 
-//Aclaramos cual es el Div del error en cada caso
-losCampos.forEach(function (unCampo) {
+  var errores = {};
 
-  //console.log(unCampo.name + "tiene el valor: " + unCampo.value);
-  var divError = null;
-  if (unCampo.type !== "file") {
-    divError = unCampo.nextElementSibling;
-  } else {
-    divError = unCampo.parentElement.nextElementSibling;
-  }
+  //Aclaramos cual es el Div del error en cada caso
+  losCampos.forEach(function (unCampo) {
 
-  //Validamos cuando el usuario sale del input
-  unCampo.addEventListener("blur", function () {
-    var valorDelCampo = unCampo.value.trim();
-    // si el campo está vacío
-
-    if (valorDelCampo === "") {
-      this.classList.add("is-invalid");
-      divError.style.display = "block";
-      divError.innerText = `Este campo es obligatorio`;
-      errores[this.name] = true;
+    //console.log(unCampo.name + "tiene el valor: " + unCampo.value);
+    var divError = null;
+    if (unCampo.type !== "file") {
+      divError = unCampo.nextElementSibling;
     } else {
-      this.classList.remove("is-invalid");
-      divError.style.display = "none";
-      divError.innerText = "";
-      delete errores[this.name];
-
-
-
-
-      // si el password tiene menos de 5 caracteres o si le faltan las letras "DH"
-      if (this.name === "password") {
-        if (valorDelCampo.length < 5) {
-          this.classList.add("is-invalid");
-          divError.style.display = "block";
-          divError.innerText = "La contraseña debe tener al menos 5 caracteres"
-          errores[this.name] = true;
-
-        } else if (valorDelCampo.indexOf("DH") < 0) {
-          this.classList.add("is-invalid");
-          divError.style.display = "block";
-          divError.innerText = "La contraseña debe incluir las letras 'DH'";
-          errores[this.name] = true;
-        } else if (valorDelCampo.indexOf(" ") > 0){
-          this.classList.add("is-invalid");
-          divError.style.display = "block";
-          divError.innerText = "La contraseña no puede tener espacios en blanco";
-          errores[this.name] = true;
-        }
-
-
-
-
-        else {
-          this.classList.remove("is-invalid");
-          divError.style.display = "none";
-          divError.innerText = "";
-        }
-      }
-
-      // Nos aseguramos de que tenga un formato de email válido
-      if (this.name === "email") {
-        if (!regexEmail.test(valorDelCampo)) {
-          this.classList.add("is-invalid");
-          divError.style.display = "block";
-          divError.innerText = "Ingresá un email válido"
-
-
-          errores[this.name] = true;
-        } else {
-          this.classList.remove("is-invalid");
-          divError.style.display = "none";
-          divError.innerText = "";
-        }
-      }
+      divError = unCampo.parentElement.nextElementSibling;
     }
 
-    console.log(errores);
-  });
+    //Validamos cuando el usuario sale del input
+    unCampo.addEventListener("blur", function () {
+      var valorDelCampo = unCampo.value.trim();
+      // si el campo está vacío
 
-  //Validamos la extension de la foto
-  if (unCampo.name === "avatar") {
-    unCampo.addEventListener("change", function () {
-      var nombreArchivo = this.value.split("\\").pop();
-      this.nextElementSibling.innerText = nombreArchivo
-
-      var extensionArchivo = this.value.split(".").pop();
-
-
-      var extensionesAceptadas = ["jpg", "jpeg", "png"];
-
-      var extensionEncontrada = extensionesAceptadas.find(function (ext) {
-        return ext === extensionArchivo;
-      });
-
-
-      if (extensionEncontrada === undefined) {
+      if (valorDelCampo === "") {
         this.classList.add("is-invalid");
         divError.style.display = "block";
-        divError.innerText = "Formato inválido. Los formatos soportados son jpg, jpeg y png";
-
+        divError.innerText = `Este campo es obligatorio`;
         errores[this.name] = true;
       } else {
         this.classList.remove("is-invalid");
         divError.style.display = "none";
         divError.innerText = "";
-
         delete errores[this.name];
+
+        // si el password tiene menos de 5 caracteres o si le faltan las letras "DH"
+        if (this.name === "password") {
+          if (valorDelCampo.length < 5) {
+            this.classList.add("is-invalid");
+            divError.style.display = "block";
+            divError.innerText = "La contraseña debe tener al menos 5 caracteres"
+            errores[this.name] = true;
+
+          } else if (valorDelCampo.indexOf("DH") < 0) {
+            this.classList.add("is-invalid");
+            divError.style.display = "block";
+            divError.innerText = "La contraseña debe incluir las letras 'DH'";
+            errores[this.name] = true;
+          } else if (valorDelCampo.indexOf(" ") > 0){
+            this.classList.add("is-invalid");
+            divError.style.display = "block";
+            divError.innerText = "La contraseña no puede tener espacios en blanco";
+            errores[this.name] = true;
+          }
+
+          else {
+            this.classList.remove("is-invalid");
+            divError.style.display = "none";
+            divError.innerText = "";
+          }
+        }
+
+        // Nos aseguramos de que tenga un formato de email válido
+        if (this.name === "email") {
+          if (!regexEmail.test(valorDelCampo)) {
+            this.classList.add("is-invalid");
+            divError.style.display = "block";
+            divError.innerText = "Ingresá un email válido"
+            errores[this.name] = true;
+          } else {
+            this.classList.remove("is-invalid");
+            divError.style.display = "none";
+            divError.innerText = "";
+          }
+        }
       }
-    })
-  }
-});
 
+      console.log(errores);
+    });
 
-// Valido cuando se envíe el formulario //
-elFormulario.addEventListener("submit", function (event) {
-  losCampos.forEach(function (unCampo) {
-    var valorFinalDelCampo = unCampo.value.trim();
+    //Validamos la extension de la foto
+    if (unCampo.name === "avatar") {
+      unCampo.addEventListener("change", function () {
+        var nombreArchivo = this.value.split("\\").pop();
+        this.nextElementSibling.innerText = nombreArchivo
+        var extensionArchivo = this.value.split(".").pop();
+        var extensionesAceptadas = ["jpg", "jpeg", "png"];
+        var extensionEncontrada = extensionesAceptadas.find(function (ext) {
+          return ext === extensionArchivo;
+        });
 
-    if (valorFinalDelCampo === "") {
-      errores[unCampo.name] = true;
+        if (extensionEncontrada === undefined) {
+          this.classList.add("is-invalid");
+          divError.style.display = "block";
+          divError.innerText = "Formato inválido. Los formatos soportados son jpg, jpeg y png";
+          errores[this.name] = true;
+        } else {
+          this.classList.remove("is-invalid");
+          divError.style.display = "none";
+          divError.innerText = "";
+          delete errores[this.name];
+        }
+      })
     }
+  });
+
+
+  // Valido cuando se envíe el formulario //
+  elFormulario.addEventListener("submit", function (event) {
+    losCampos.forEach(function (unCampo) {
+      var valorFinalDelCampo = unCampo.value.trim();
+
+      if (valorFinalDelCampo === "") {
+        errores[unCampo.name] = true;
+      }
+    });
   });
 
   // Evitamos que se envíe el formulario si contiene errores
@@ -200,5 +190,4 @@ elFormulario.addEventListener("submit", function (event) {
     alert("Campos vacíos");
     console.log(errores);
     event.preventDefault();
-  }
-})
+  }};

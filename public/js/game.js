@@ -189,8 +189,11 @@ function showTime() {
 /*Logica de guardado de puntaje y partida*/
 
 var scoreInput = document.querySelector('#scoreInput');
-setInterval(function () {
-  scoreInput.value = sessionStorage.getItem("score");
-}, 1000)
+if (scoreInput != null) {
+  setInterval(function () {
+    scoreInput.value = sessionStorage.getItem("score");
+  }, 1000)
+}
+
 
 var formScore = document.querySelector("#formScore");
