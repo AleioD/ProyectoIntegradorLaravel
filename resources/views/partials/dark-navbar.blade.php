@@ -2,7 +2,7 @@
 $navAdmin = [
   "Preguntas" => "questionAdminForm",
 ];
- ?>
+?>
 
 
 <header> <!-- Encabezadp -->
@@ -54,12 +54,12 @@ $navAdmin = [
               @csrf
             </form>
           </ul>
-            <br>
+          <br>
           <h5>Cambiar Tema:</h5>
           <button data-theme="/css/style.css"  id="stylesheet1" class="btn btn-primary btn-theme btn-sm"> <a style="background:#007bff;">ORIGINAL</a></button>
           <button data-theme="/css/style2.css" id="stylesheet2" class="btn btn-danger btn-theme btn-sm"> <a  style="background:#dc3545;">ON FIRE</a></button>
           <button data-theme="/css/style3.css" id="stylesheet3" class="btn btn-light btn-theme btn-sm"> <a style="background:#F8F9Fa;">PEACE</a></button>
-         <br>
+          <br>
         </div>
       </nav>
       @endauth
@@ -86,7 +86,7 @@ $navAdmin = [
             @endguest
             <span class="game-text-subtitle">@yield('category')</span>
           </div>
-<!--  AUDIO  -->
+          <!--  AUDIO  -->
           <div class="audio">
             <br>
 
@@ -105,21 +105,23 @@ $navAdmin = [
                     </object>
                   </audio>
                 </div>
-<!--  FIN AUDIO  -->
-        </div>
+                <!--  FIN AUDIO  -->
+              </div>
 
-      
+              <div class="game-navbar-div">
+                <span class="time" id="timer" style="display:none;">Tiempo: 25s</span>
+              </div>
 
-        <div class="game-navbar-div">
-          <span class="game-text-title" id="score">0</span>
-          <div class="rating-game" style="display:none;">
-            <i class="material-icons estrellita active">star</i>
-            <i class="material-icons estrellita active">star</i>
-            <i class="material-icons estrellita active">star</i>
-            <i class="material-icons estrellita">star</i>
-            <i class="material-icons estrellita">star</i>
-          </div>
-        </div>
+              <div class="game-navbar-div">
+                <span class="game-text-title" id="score">0</span>
+                <div class="rating-game" style="display:none;">
+                  <i class="material-icons estrellita active">star</i>
+                  <i class="material-icons estrellita active">star</i>
+                  <i class="material-icons estrellita active">star</i>
+                  <i class="material-icons estrellita">star</i>
+                  <i class="material-icons estrellita">star</i>
+                </div>
+              </div>
 
-      </nav>
-    </header>
+            </nav>
+          </header>

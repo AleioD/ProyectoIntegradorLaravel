@@ -1,5 +1,30 @@
 console.log('game is running');
 var downloadTimer;
+var audio= document.getElementById("audio");
+
+var volumeS=document.getElementById("buttonS");
+if (volumeS != null) {
+  volumeS.addEventListener("click", function() {
+    volumeB.style.display="flex";
+    volumeS.style.display="none";
+    sessionStorage.setItem("silence", "silenceFalse");
+    alert("Sonido activado");
+    location.reload();
+    audio.play();
+  });
+}
+
+var volumeB=document.getElementById("buttonB");
+if (volumeB != null) {
+  volumeB.addEventListener("click", function() {
+    volumeS.style.display="flex";
+    volumeB.style.display="none";
+    sessionStorage.setItem('silence', "silence");
+    audio.muted = true;
+    alert("Juego silenciado");
+    location.reload();
+  });
+}
 
 /*
 Agregamos funcionalidad a los botones salir del juego y guardar.
@@ -19,9 +44,9 @@ if (document.title == 'Juego') {
   */
   showTime();
   recoverScore();
+  recoverAudioStatus();
   startCounting();
 }
-
 
 function doQuitGame() {
   sessionStorage.removeItem("score")
@@ -135,33 +160,25 @@ function recoverScore() {
   }
 }
 
+function recoverAudioStatus() {
+  if (sessionStorage.getItem("silence") === "silence") {
+    if (volumeB != null) {
+      volumeS.style.display="flex";
+      volumeB.style.display="none";
+      audio.muted = true;
+    }
+  } else {
+    if (volumeS != null) {
+        volumeB.style.display="flex";
+        volumeS.style.display="none";
+        sessionStorage.setItem("silence", "silenceFalse");
+        audio.muted = false;
+    }
+  }
+}
+
 function showTime() {
   if (document.title == "Juego") {
     document.querySelector('#timer').style.display = 'flex';
   }
 }
-
-//////////////
-//////////////
-
-
-  var audio= document.getElementById("audio");
-
-
-  var volumeS=document.getElementById("buttonS");
-  if (volumeS != null) {
-    volumeS.addEventListener("click", function() {
-      volumeB.style.display="flex";
-      volumeS.style.display="none";
-      audio.play();
-    });
-  }
-
-  var volumeB=document.getElementById("buttonB");
-  if (volumeB != null) {
-    volumeB.addEventListener("click", function() {
-      volumeS.style.display="flex";
-      volumeB.style.display="none";
-      audio.pause();
-    });
-  }
