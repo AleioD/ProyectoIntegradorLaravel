@@ -61,9 +61,9 @@ class RegisterController extends Controller
     {
 
       $request = request();
-
-      $ruta = $request->file('avatar')->store('public');
-      $fileName = basename($ruta);
+      $image = $request->file('avatar');
+      $imageName = uniqid("img_") . "." . $image->extension();
+      $image->storePubliclyAs("/public/avatars/", $imageName);
 
         return User::create([
             'name' => $data['name'],
@@ -73,7 +73,7 @@ class RegisterController extends Controller
             'surname' => $data['surname'],
             'country' => $data['country'],
             'state' => $data['state'],
-            // 'avatar' => $data['avatar']
+            'avatar' => $imageName,
         ]);
 
         $this->avatar = $fileName;
