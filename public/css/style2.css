@@ -231,6 +231,33 @@ display: none;
 
 /* FINAL navbar*/
 
+/*INICIO game*/
+.container-game{
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.h2-game{
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
+  text-align: center;
+
+}
+
+.answer-result {
+  font-weight: bold;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.3em;
+  padding: 7%;
+}
+/*FINAL game*/
+
 /* INICIO index*/
 
 .container-ppal {

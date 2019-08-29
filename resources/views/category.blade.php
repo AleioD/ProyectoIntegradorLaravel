@@ -2,7 +2,7 @@
 @section('pageTitle',"Categorias")
 @section('content')
 
-<section class="container mx-auto">
+<section class="container-game mx-auto" style="width:100vw;">
 	<h2 class="h2-about">Elegí una categoría</h2>
 
 	<div class="container justify-content-center">
@@ -14,43 +14,43 @@
 				<li data-target="#carouselExampleControls" data-slide-to="3"></li>
 				<li data-target="#carouselExampleControls" data-slide-to="4"></li>
 				<li data-target="#carouselExampleControls" data-slide-to="5"></li>
-				<li data-target="#carouselExampleControls" data-slide-to="6"></li>
+
 			</ol>
 			<div class="carousel-inner text-center" id="categoriesList">
 				<div class="carousel-item active">
-					<div class="card category-card" >
+					<div class="card" style="width: 250px; margin: auto;">
 						<img class="mx-auto" src="/img/categorias/categoria_arte.png" alt="Arte">
 						<p class="category-text">Arte</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<div class="card category-card">
+					<div class="card" style="width: 250px; margin: auto;">
 						<img class="mx-auto" src="/img/categorias/categoria_ciencia.png" alt="Ciencia">
 						<p class="category-text">Ciencia</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<div class="card category-card">
+					<div class="card" style="width: 250px; margin: auto;">
 						<img class="mx-auto" src="/img/categorias/categoria_cultura.png" alt="Cultura General">
 						<p class="category-text">Cultura General</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<div class="card category-card">
+					<div class="card" style="width: 250px; margin: auto;">
 						<img class="mx-auto" src="/img/categorias/categoria_literatura.png" alt="Literatura">
 						<p class="category-text">Literatura</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<div class="card category-card">
+					<div class="card" style="width: 250px; margin: auto;">
 						<img class="mx-auto" src="/img/categorias/categoria_deportes.png" alt="Deportes">
 						<p class="category-text">Deportes</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<div class="card category-card">
+					<div class="card" style="width:250px; margin: auto;">
 						<img class="mx-auto" src="/img/categorias/categoria_unselect.png" alt="Sin Categoria">
-						<p class="category-text">Sin Categoria</p>
+						<p class="category-text">Categoría al azar</p>
 					</div>
 				</div>
 			</div>

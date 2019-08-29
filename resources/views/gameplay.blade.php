@@ -3,48 +3,46 @@
 @section('category',$categoryName ?? 'Sin categoría')
 @section('content')
 
-<!-- {{$question}};
-{{$answers}}; -->
+{{-- <!-- {{$question}};
+{{$answers}}; --> --}}
 
-
+<div style="width:100vw; display:flex;flex-wrap: wrap; flex-direction: column; justify-content: center;" >
 <form action="/saveGame" method="post" id="formScore" style="display:none;">
 	@csrf
 	<input type="text" name="columnaAguardar" id="scoreInput">
 </form>
 
-<div style="display:flex; justify-content: center; align-items: center; width: 500px; ">
-	<img src="/img/logoSabiondos.png" style="width:50%;" alt="Logo Sabiondos">
+
+<div style="background-color: rgba(0, 0, 0, 0.2); margin: 5% 0; height:auto; display:flex; flex-wrap: wrap; justify-content: center;">
+<h2 class="h2-game"   id="questionTitle">{{$question['question']}}</h2>
 </div>
-
-<h2 class="h2-about mb-5" id="questionTitle">{{$question['question']}}</h2>
-
-<div class="row">
+<div class="row ">
 	<div class="col-md-6 buttonAnswer" id="a1">
-		<button class="col-md-12 btn btn-light btn-lg m-2" type="button" name="button" value="{{$answers[0]['isCorrect']}}">{{$answers[0]['answer']}}</button>
+		<button class="col-md-12 btn btn-light btn-lg mt-2" type="button" name="button" value="{{$answers[0]['isCorrect']}}">{{$answers[0]['answer']}}</button>
 	</div>
 	<div class="col-md-6 buttonAnswer" id="a2">
-		<button class="col-md-12 btn btn-light btn-lg m-2" type="button" name="button" value="{{$answers[1]['isCorrect']}}">{{$answers[1]['answer']}}</button>
+		<button class="col-md-12 btn btn-light btn-lg mt-2" type="button" name="button" value="{{$answers[1]['isCorrect']}}">{{$answers[1]['answer']}}</button>
 	</div>
 	<div class="col-md-6 buttonAnswer" id="a3">
-		<button class="col-md-12 btn btn-light btn-lg m-2" type="button" name="button" value="{{$answers[2]['isCorrect']}}">{{$answers[2]['answer']}}</button>
+		<button class="col-md-12 btn btn-light btn-lg mt-2" type="button" name="button" value="{{$answers[2]['isCorrect']}}">{{$answers[2]['answer']}}</button>
 	</div>
 	<div class="col-md-6 buttonAnswer" id="a4">
-		<button class="col-md-12 btn btn-light btn-lg m-2" type="button" name="button" value="{{$answers[3]['isCorrect']}}">{{$answers[3]['answer']}}</button>
+		<button class="col-md-12 btn btn-light btn-lg mt-2" type="button" name="button" value="{{$answers[3]['isCorrect']}}">{{$answers[3]['answer']}}</button>
 	</div>
 </div>
 
 <div class="row m-5 w-85" style="display:none;" id="resultCorrect">
 	<span class="col-md-12 answer-result color-correct">
-		<p>Tu respuesta es correcta</p>
+		<p> Correcto </p>
 	</span>
 </div>
 
-<div class="row m-5" style="display:none;" id="resultIncorrect">
+<div class="row m-5 p-5" style="display:none;" id="resultIncorrect">
 	<span class="col-md-12 answer-result color-incorrect">
-		<p>Tu respuesta es incorrecta</p>
+		<p> Incorrecto </p>
 	</span>
 </div>
-
+</div>
 <!-- <form class="" action="/game" method="post">
 {{ csrf_field() }};
 <input type="text" name="score" value="10">

@@ -225,7 +225,32 @@ display: none;
 }
 
 /* FINAL navbar*/
+/*INICIO game*/
+.container-game{
+  max-width: 360px;
+  margin: 0 auto;
+}
 
+.h2-game{
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
+  text-align: center;
+
+  }
+
+.answer-result {
+  font-weight: bold;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.3em;
+  padding: 7%;
+}
+/*FINAL game*/
 /* INICIO index*/
 
 .container-ppal {
@@ -808,7 +833,11 @@ footer{
   }
 
   /*FINAL index*/
-
+  .answer-result {
+    max-width: 350px;
+    height: 50px;
+    line-height: 10px;
+  }
   /*imagen de fondo*/
 
   .image-t-desktop{
@@ -1050,6 +1079,13 @@ i.estrellita.active {
   .br-movil{
     display: none;
   }
+
+  .answer-result {
+    max-width: 350px;
+    height: 50px;
+    line-height: 0em;
+  }
+
 }
 
 
@@ -1144,16 +1180,8 @@ body.game {
 }
 
 .answer-result {
-  font-weight: bold;
-  color: white;
   max-width: 350px;
-  height: 30px;
-  border-radius: 50px;
-  margin: auto;
-  text-align: center;
-  line-height: 0em;
-  font-size: 1.3em;
-  padding: 7%;
+  height: 50px;
 }
 
 .color-incorrect {
@@ -1172,7 +1200,7 @@ body.game {
   box-shadow: 0 0 0 0.3rem rgba(237, 82, 81,.9);
 }
 
-@media (min-width:440px) {
+@media (min-width:360px) {
   .category-card {
     width: 25%;
   }

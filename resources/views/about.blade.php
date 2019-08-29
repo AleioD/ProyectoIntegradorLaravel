@@ -13,7 +13,7 @@
 
         <!--carrousel bootstrap-mobile-->
 
-        <div class="carrousel-mobile .d-block .d-sm-none" ">
+        <div class="carrousel-mobile .d-block .d-sm-none" >
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators" style="position:relative;">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

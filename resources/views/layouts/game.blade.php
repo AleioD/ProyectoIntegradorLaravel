@@ -11,10 +11,13 @@
 
 </head>
 
-<body class="game">
+<body class="container-about" style="background-image:none; width:100vw; margin-top:0;">
 @include('partials.dark-navbar')
-  <div class="container-fluid">
+  <div style="width:100vw;" >
+    <div style="display:inline-flex; justify-content: space-between; width:100%;">
+    	<img src="/img/logoSabiondos.png" style="margin-left: 20px; width:200px; height:52px;" alt="Logo Sabiondos">
     <i class="material-icons cerrar" data-toggle="modal" data-target="#salirDelJuego">close</i>
+      </div>
     @yield('content')
   </div>
 
