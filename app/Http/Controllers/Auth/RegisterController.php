@@ -73,7 +73,7 @@ class RegisterController extends Controller
             'surname' => $data['surname'],
             'country' => $data['country'],
             'state' => $data['state'],
-            'avatar' => $imageName,
+            'avatar' => $imageName
         ]);
 
         $this->avatar = $fileName;

@@ -28,10 +28,12 @@ $navLog=[
         <div>
           <h1 class="h1-profile"><strong>{{Auth::user()->getFullName()}}</strong></h1>
           <div class="foto-perfil">
-            <img src=  {{ Auth::user()->avatar ?
-              Auth::user()->avatar :
-              "./img/user_8.png" }}  alt="Foto del usuario">
+            <img src= "storage/avatars/{{Auth::user()->avatar}}" alt="Foto del usuario">
             </div>
+
+
+
+
             <div class="nombre-perfil">
               {{Auth::user()->userName}}
             </div>
@@ -93,6 +95,7 @@ $navLog=[
                     <div>
                       <img src="/img/logoSabiondos.png" style="width:50%;" alt="Logo Sabiondos">
                     </div>
+
               @endif
           </div>
 

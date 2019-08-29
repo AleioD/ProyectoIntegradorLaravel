@@ -15,10 +15,12 @@
         <h1 class="titulo-seccion">Ranking</h1>
         <ul>
           @foreach ($topScorers as $unUsuario)
-        <li>
+                    <li>
          <div class="ranking-wrap row ">
-            <img class="rounded-circle user-img " src="{{ $unUsuario->avatar  ?
-            $unUsuario->avatar : "./img/user_8.png" }}" alt="user">
+
+             <img class="rounded-circle user-img " style="width:180px;" src="storage/avatars/{{$unUsuario->avatar}}" alt="Foto del usuario" >
+
+
             <div class="col-xs-12 col-md-8 col-lg-10 user-data ">
              <div class="progress">
                <div class="progress-bar light-green" style="width:{{ ($unUsuario->score)*100/8000 }}%"></div>

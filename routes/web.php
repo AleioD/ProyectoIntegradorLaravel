@@ -49,3 +49,7 @@ Route::get('/category', 'GameController@showCategory');
 
 
 Auth::routes();
+Route::post('/logout', function(){
+   Auth::logout();
+   return Redirect::to('index');
+})->name('logout');
