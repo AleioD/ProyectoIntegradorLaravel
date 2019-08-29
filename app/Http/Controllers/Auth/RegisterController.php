@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
-
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
 class RegisterController extends Controller
 {
     /*
@@ -20,16 +17,13 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
-
     use RegistersUsers;
-
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
     protected $redirectTo = '/home';
-
     /**
      * Create a new controller instance.
      *
@@ -39,7 +33,6 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
     /**
      * Get a validator for an incoming registration request.
      *
@@ -56,10 +49,8 @@ class RegisterController extends Controller
             "surname" => ['required', 'string', 'max:255'],
             "country" => ['required'],
             "avatar" => ['required', 'image'],
-
         ]);
     }
-
     /**
      * Create a new user instance after a valid registration.
      *
@@ -70,9 +61,9 @@ class RegisterController extends Controller
     {
 
       $request = request();
-
-      $ruta = $request->file('avatar')->store('public');
-      $fileName = basename($ruta);
+      $image = $request->file('avatar');
+      $imageName = uniqid("img_") . "." . $image->extension();
+      $image->storePubliclyAs("/public/avatars/", $imageName);
 
         return User::create([
             'name' => $data['name'],
@@ -82,7 +73,7 @@ class RegisterController extends Controller
             'surname' => $data['surname'],
             'country' => $data['country'],
             'state' => $data['state'],
-            // 'avatar' => $data['avatar']
+            'avatar' => $imageName,
         ]);
 
         $this->avatar = $fileName;
