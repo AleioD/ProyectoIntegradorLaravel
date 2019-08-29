@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Question;
 use App\Answer;
+use App\Round;
 use App\User;
 use Auth;
 
@@ -60,10 +61,17 @@ class GameController extends Controller
       //dd($usuario->score);
       $puntosFinal = $puntosPartida + $usuario->score;
 
-      DB::table('rounds')->insert([
+      Round::insert([
+        'created_at' => date('Y-m-d H:i:s'),
+        'updated_at' => date('Y-m-d H:i:s'),
         'user_id' => Auth::user()->id,
         'score' => $puntosPartida,
       ]);
+
+      /*DB::table('rounds')->insert([
+        'user_id' => Auth::user()->id,
+        'score' => $puntosPartida,
+      ]);*/
 
       DB::table('users')->where('id', Auth::user()->id)->update(['score' => $puntosFinal]);
       return redirect('/ranking');

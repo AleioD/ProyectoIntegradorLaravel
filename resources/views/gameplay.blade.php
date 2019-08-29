@@ -7,7 +7,7 @@
 {{$answers}}; -->
 
 
-<form action="/saveGame" method="post" id="formScore">
+<form action="/saveGame" method="post" id="formScore" style="display:none;">
 	@csrf
 	<input type="text" name="columnaAguardar" id="scoreInput">
 </form>

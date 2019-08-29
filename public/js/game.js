@@ -34,6 +34,8 @@ if (document.title == 'Categorias') {
 var startGame = document.querySelector('#startGame').addEventListener("click", selectCategory);
 var quitGame = document.querySelector('#quitGame').addEventListener("click", doQuitGame);
 var saveGame = document.querySelector('#saveGame').addEventListener("click", doSaveGame);
+document.querySelector('.audio').style.display = 'none';
+audio.muted = true;
 }
 
 if (document.title == 'Juego') {
