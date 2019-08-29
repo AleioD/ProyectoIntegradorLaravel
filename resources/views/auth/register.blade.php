@@ -79,7 +79,7 @@
                     <div class="form-group">
                       <label for="state">Elegí una provincia:</label>
                       <select id="state" name="state" class="form-control @error("state") is-invalid @enderror" value="{{ old('state') }}" required autocomplete="state" autofocus>
-    <option value="">Elige una provincia</option>
+                      <option value="">Elige una provincia</option>
                       </select>
                       @error("state")
                         <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>

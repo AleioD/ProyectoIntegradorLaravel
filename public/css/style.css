@@ -684,10 +684,7 @@ footer{
   }
 
   /* Final questions admin*/
-}
 
-/* Inicio Ranking desktop*/
-@media (min-width:768px) {
   .input-search {
     width: 500px;
   }
@@ -696,9 +693,8 @@ footer{
     padding: 20px !important;
   }
   .blank-wrapper {
-    margin-top: 100px;
     width: 900px;
-    margin: 100px auto;
+    margin: 200px auto;
     border-radius: 40px;
     padding: 40px !important;
   }
@@ -706,11 +702,14 @@ footer{
     margin: 20px;
   }
   .titulo-seccion {
-    margin: 50px auto;
+    margin: 20px auto;
   }
 
   /* Final Ranking desktop */
-
+  .container-ppal {
+    max-width: 768px;
+    margin: 0 auto;
+  }
   body{
     background-image: url(../img/fondo.png);
     background-repeat: repeat;

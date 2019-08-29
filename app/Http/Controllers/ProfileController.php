@@ -22,9 +22,12 @@ class ProfileController extends Controller
 
     public function showRanking(){
       $topScorers = DB::table('users')
-                    ->select('username', 'name', 'surname', 'score')
+                    ->select('username', 'name', 'surname', 'score','avatar')
                     ->orderBy('score', 'desc')
+                    ->limit('5')
                     ->get();
+
+
       return view('ranking', compact('topScorers'));
     }
 
@@ -39,6 +42,7 @@ class ProfileController extends Controller
                     ->where('user_id', Auth::user()->id)
                     ->orderBy('created_at', 'desc')
                     ->get();
+
       return view('rounds-show', compact('roundsByUser'));
 
   }

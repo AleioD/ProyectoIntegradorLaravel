@@ -727,6 +727,10 @@ footer{
     background-repeat: repeat;
   }
 
+  .container-ppal {
+    max-width: 768px;
+    margin: 0 auto;
+  }
   /*INICIO navbar*/
   .main-nav {
     position: absolute;

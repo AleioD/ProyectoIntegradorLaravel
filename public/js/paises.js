@@ -6,6 +6,7 @@ var campoEmail = document.querySelector("input[name=email]");
 var campoPaises = document.querySelector("select[name=country]");
 var campoProvincias = document.querySelector("select[name=state]");
 
+
 //Traemos el formulario
 var elFormulario = document.querySelector("#formulario");
 //El div de las Provincias, que aparece oculto
@@ -120,7 +121,7 @@ losCampos.forEach(function (unCampo) {
           errores[this.name] = true;
         }
 
-        
+
 
 
         else {
@@ -157,6 +158,7 @@ losCampos.forEach(function (unCampo) {
       this.nextElementSibling.innerText = nombreArchivo
 
       var extensionArchivo = this.value.split(".").pop();
+
 
       var extensionesAceptadas = ["jpg", "jpeg", "png"];
 
