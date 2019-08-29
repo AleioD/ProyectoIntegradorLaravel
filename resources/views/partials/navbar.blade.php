@@ -48,8 +48,10 @@ $navLog=[
           </div>
           <div class="menu-perfil">
             <ul>
-              <li style="display:block; background:rgba(0,0,0,0.2);padding: 5px;border-radius: 5px; margin: 0 0 10px 0;">  @foreach ($navAdmin as $linkAdmin => $linkUrl)
+              @foreach ($navAdmin as $linkAdmin => $linkUrl)
+
                 @if (Auth::user()->isAdmin() == 1 && $linkAdmin == "Preguntas")
+                  <li style="display:block; background:rgba(0,0,0,0.2);padding: 5px;border-radius: 5px; margin: 0 0 10px 0;">
                   <a style=" background:rgba(0,0,0,0);" href="{{$linkUrl}}">{{$linkAdmin}}
                   </a></li>
                 @endif

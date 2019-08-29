@@ -2,63 +2,43 @@
 @section('pageTitle',"Ranking")
 @section('content')
 
-  <?php
-  $rankingList =
-  [
-    [
-      'username' => 'cata1952',
-      'categoria' => 'principiante',
-      'puntos' => 5000,
-      'porcentaje' => 100,
-      'imagen' => '/img/user_1.png',
-      'rating' => 2,
-    ]
-  ];
-  //var_dump($questionArrayList);
-  // https://psicologiaymente.com/miscelanea/preguntas-cultura-general
-  ?>
 
 
+  {{-- <div class="container mx-auto mt-5">
 
-  <div class="container mx-auto mt-5">
     <div class="row d-flex flex-row justify-content-around">
       <section class="blank-wrapper col-xl-12 shadow-lg p-3 mb-5 bg-white">
-        <ul>
-    			@foreach ($topScorers as $unUsuario)
-    				<li>
-    					<b>Usuario: </b> {{ $unUsuario->username }} <br>
-    					<b>Nombre: </b> {{ $unUsuario->name }} <br>
-    					<b>Apellido: </b> {{ $unUsuario->surname }} <br>
-    					<b>Puntaje: </b> {{ $unUsuario->score }} <br>
-    				</li>
-    			@endforeach
-    		</ul>
+ --}}
+
+<div class="container-ppal" style="margin-top:10%;">
+   <section class="blank-wrapper col-md-12 shadow-lg p-3 mb-5 bg-white">
         <h1 class="titulo-seccion">Ranking</h1>
-        <div class="ranking-wrap row">
-          <?php foreach ($rankingList as $oneUser) : ?>
-            <img class="rounded-circle user-img mx-5" src="<?=$oneUser['imagen']?>" alt="user">
-            <div class="col-xs-12 col-md-8 user-data">
-              <div class="progress">
-                <div class="progress-bar light-green" style="width:<?=$oneUser['porcentaje']?>%"></div>
-              </div>
-              <div class="row">
-                <div class="col-6 rating">
-                  <?php for ($i = 1; $i <= $oneUser['rating']; $i++) : ?>
-                    <i class="material-icons estrellita active">star</i>
-                  <?php endfor; ?>
-                  <?php for ($i = 1; $i <= 5 - $oneUser['rating']; $i++) : ?>
-                    <i class="material-icons estrellita">star</i>
-                  <?php endfor; ?>
-                </div>
-                <div class="col-6 puntaje">
-                  <p><?=$oneUser['puntos']?> pts.</p>
-                </div>
-              </div>
+        <ul>
+          @foreach ($topScorers as $unUsuario)
+        <li>
+         <div class="ranking-wrap row ">
+            <img class="rounded-circle user-img " src="{{ $unUsuario->avatar  ?
+            $unUsuario->avatar : "./img/user_8.png" }}" alt="user">
+            <div class="col-xs-12 col-md-8 col-lg-10 user-data ">
+             <div class="progress">
+               <div class="progress-bar light-green" style="width:{{ ($unUsuario->score)*100/8000 }}%"></div>
+             </div>
+               <div class="row">
+             <div class="col-6"style="font-size:1.2em; color: #707070; font-weight: bolder">
+             {{ $unUsuario->username }}
+             </div>
+            <div class="col-6 puntaje" >
+            <p>{{ $unUsuario->score }} pts.</p>
             </div>
-          <?php endforeach; ?>
-        </div>
+          </div>
+</div>
+</div>
+        </li>
+      </ul>
+
+            @endforeach
+
       </section>
-    </div>
-  </div>
+</div>
 
 @endsection

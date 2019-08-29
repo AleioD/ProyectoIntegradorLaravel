@@ -696,10 +696,12 @@ footer{
   }
 
   /* Final questions admin*/
-}
+  .container-ppal {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  /* Final Ranking desktop */
 
-/* Inicio Ranking desktop*/
-@media (min-width:768px) {
   .input-search {
     width: 500px;
   }
