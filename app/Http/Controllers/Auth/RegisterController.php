@@ -59,9 +59,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
       $request = request();
+
       $ruta = $request->file('avatar')->store('public');
       $fileName = basename($ruta);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -72,6 +75,7 @@ class RegisterController extends Controller
             'state' => $data['state'],
             // 'avatar' => $data['avatar']
         ]);
+
         $this->avatar = $fileName;
         $this->save();
     }
