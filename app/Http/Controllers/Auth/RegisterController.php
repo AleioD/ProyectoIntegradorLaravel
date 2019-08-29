@@ -68,6 +68,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+      $request = request();
+
+      $ruta = $request->file('avatar')->store('public');
+      $fileName = basename($ruta);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -76,7 +82,10 @@ class RegisterController extends Controller
             'surname' => $data['surname'],
             'country' => $data['country'],
             'state' => $data['state'],
-            'avatar' => $data['avatar']
+            // 'avatar' => $data['avatar']
         ]);
+
+        $this->avatar = $fileName;
+        $this->save();
     }
 }
