@@ -7,7 +7,7 @@
 {{$answers}}; -->
 
 
-<form action="/guardarScore" method="post" id="formScore">
+<form action="/saveGame" method="post" id="formScore">
 	@csrf
 	<input type="text" name="columnaAguardar" id="scoreInput">
 </form>
@@ -15,10 +15,6 @@
 <div style="display:flex; justify-content: center; align-items: center; width: 500px; ">
 	<img src="/img/logoSabiondos.png" style="width:50%;" alt="Logo Sabiondos">
 </div>
-
-
-<button type="button" id="saveScore">Guardar Partida</button>
-
 
 <h2 class="h2-about mb-5" id="questionTitle">{{$question['question']}}</h2>
 
@@ -56,18 +52,4 @@
 </form> -->
 
 <br><br>
-
-<script>
-	var scoreInput = document.querySelector('#scoreInput');
-	setInterval(function () {
-		scoreInput.value = sessionStorage.getItem("score");
-	}, 1000)
-
-	var formScore = document.querySelector("#formScore");
-	var btnSaveScore = document.querySelector("#saveScore");
-
-	btnSaveScore.addEventListener("click", function () {
-		formScore.submit();
-	})
-</script>
 @endsection

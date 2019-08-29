@@ -54,7 +54,8 @@ function doQuitGame() {
 }
 
 function doSaveGame() {
-  window.location.pathname = '/saveGame';
+  formScore.submit();
+  //window.location.pathname = '/saveGame';
   sessionStorage.removeItem("score")
   // window.location.pathname = '/ranking';
 }
@@ -182,3 +183,12 @@ function showTime() {
     document.querySelector('#timer').style.display = 'flex';
   }
 }
+
+/*Logica de guardado de puntaje y partida*/
+
+var scoreInput = document.querySelector('#scoreInput');
+setInterval(function () {
+  scoreInput.value = sessionStorage.getItem("score");
+}, 1000)
+
+var formScore = document.querySelector("#formScore");

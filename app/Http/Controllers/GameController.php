@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Question;
 use App\Answer;
+use App\User;
 use Auth;
 
 class GameController extends Controller
@@ -47,17 +48,21 @@ class GameController extends Controller
       }
     }
 
-    public function saveGame(){
-
+    public function saveGame(Request $form){
+      //dd($form->columnaAguardar);
       if (Auth::user() == null) {
         return redirect('register');
       }
 
-      $puntosFinal = Auth::user()->score + 10;
+      //dd($puntosAnteriores = DB::table('users')->where('id', Auth::user()->id)->get(['score']));
+      $usuario = User::find(Auth::user()->id);
+      $puntosPartida = $form->columnaAguardar;
+      //dd($usuario->score);
+      $puntosFinal = $puntosPartida + $usuario->score;
 
       DB::table('rounds')->insert([
         'user_id' => Auth::user()->id,
-        'score' => 10,
+        'score' => $puntosPartida,
       ]);
 
       DB::table('users')->where('id', Auth::user()->id)->update(['score' => $puntosFinal]);

@@ -31,7 +31,7 @@ Route::get('/game', 'GameController@startGame');
 
 Route::post('/game', 'GameController@select');
 
-Route::get('/saveGame', 'GameController@saveGame');
+Route::post('/saveGame', 'GameController@saveGame');
 
 // Route::get('/questionAdminForm', function () {
 //     return view('questionAdminForm');
