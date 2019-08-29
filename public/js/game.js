@@ -1,6 +1,17 @@
 console.log('game is running');
 var downloadTimer;
 var audio= document.getElementById("audio");
+/*Logica de guardado de puntaje y partida*/
+
+var scoreInput = document.querySelector('#scoreInput');
+if (scoreInput != null) {
+  setInterval(function () {
+    scoreInput.value = sessionStorage.getItem("score");
+    console.log(scoreInput.value);
+  }, 1000)
+}
+
+var formScore = document.querySelector("#formScore");
 
 var volumeS=document.getElementById("buttonS");
 if (volumeS != null) {
@@ -38,28 +49,38 @@ document.querySelector('.audio').style.display = 'none';
 audio.muted = true;
 }
 
+
+
+
 if (document.title == 'Juego') {
   var quitGame = document.querySelector('#quitGame').addEventListener("click", doQuitGame);
   var saveGame = document.querySelector('#saveGame').addEventListener("click", doSaveGame);
+  var saveGame = document.querySelector('#saveGame2').addEventListener("click", doSaveGame);
+  var continueGame = document.querySelector('#continueGame').addEventListener("click", doContinue);
   /*
   Recuperamos el puntaje guardado y arrancamos el contador.
   */
   showTime();
   recoverScore();
   recoverAudioStatus();
+  answersCounter();
   startCounting();
 }
 
 function doQuitGame() {
-  sessionStorage.removeItem("score")
+  sessionStorage.removeItem("score");
+  sessionStorage.removeItem("counter");
   window.location.pathname = '/index';
 }
 
 function doSaveGame() {
   formScore.submit();
-  //window.location.pathname = '/saveGame';
-  sessionStorage.removeItem("score")
-  // window.location.pathname = '/ranking';
+  sessionStorage.removeItem("score");
+  sessionStorage.removeItem("counter");
+}
+
+function doContinue() {
+  sessionStorage.removeItem("counter");
 }
 
 function selectCategory() {
@@ -88,6 +109,8 @@ function checkAnswer(item, index) {
   document.querySelector('#'+itemId).addEventListener("click", function(){
     stopCounting();
     clearStatusStyles();
+    var count = parseInt(sessionStorage.getItem("counter"));
+    sessionStorage.setItem("counter",count+1);
     if (itemValue == 1) {
       console.log('Is correct!');
       disableButtons()
@@ -163,6 +186,17 @@ function recoverScore() {
   }
 }
 
+function answersCounter() {
+  if (parseInt(sessionStorage.getItem("counter"))) {
+    var count = parseInt(sessionStorage.getItem("counter"));
+    if (count == 3) {
+      $("#guardarElJuego").modal('show');
+    }
+  } else {
+    sessionStorage.setItem("counter", 0);
+  }
+}
+
 function recoverAudioStatus() {
   if (sessionStorage.getItem("silence") === "silence") {
     if (volumeB != null) {
@@ -185,15 +219,3 @@ function showTime() {
     document.querySelector('#timer').style.display = 'flex';
   }
 }
-
-/*Logica de guardado de puntaje y partida*/
-
-var scoreInput = document.querySelector('#scoreInput');
-if (scoreInput != null) {
-  setInterval(function () {
-    scoreInput.value = sessionStorage.getItem("score");
-  }, 1000)
-}
-
-
-var formScore = document.querySelector("#formScore");

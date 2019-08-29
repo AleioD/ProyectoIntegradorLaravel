@@ -41,7 +41,7 @@ class CreateDb extends Migration
           $table->timestamps();
           $table->unsignedBigInteger('user_id')->nullable();
           $table->foreign('user_id')->references('id')->on('users');
-          $table->integer('score');
+          $table->integer('score')->nullable()->default(0);
       });
 
     }

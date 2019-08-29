@@ -55,23 +55,15 @@ class GameController extends Controller
         return redirect('register');
       }
 
-      //dd($puntosAnteriores = DB::table('users')->where('id', Auth::user()->id)->get(['score']));
       $usuario = User::find(Auth::user()->id);
       $puntosPartida = $form->columnaAguardar;
-      //dd($usuario->score);
       $puntosFinal = $puntosPartida + $usuario->score;
-
       Round::insert([
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s'),
         'user_id' => Auth::user()->id,
         'score' => $puntosPartida,
       ]);
-
-      /*DB::table('rounds')->insert([
-        'user_id' => Auth::user()->id,
-        'score' => $puntosPartida,
-      ]);*/
 
       DB::table('users')->where('id', Auth::user()->id)->update(['score' => $puntosFinal]);
       return redirect('/ranking');
